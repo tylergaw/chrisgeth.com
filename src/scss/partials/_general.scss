@@ -1,0 +1,51 @@
+$color-grey: #353535;
+
+html,
+body {
+  background-color: #f9f8f8;
+  height: 100%;
+}
+
+[role="main"] {
+  background: transparent url("../images/sheriff.png") no-repeat 45% bottom;
+  background-size: 100%;
+  border-right: 14px solid $color-grey;
+  border-left: 6px solid $color-grey;
+  box-sizing: border-box;
+  height: 100%;
+  overflow: hidden;
+  padding: 4rem 1rem 28rem 1rem;
+  position: relative;
+
+  &:before,
+  &:after {
+    background-color: $color-grey;
+    content: "";
+    display: block;
+    height: 3.5rem;
+    left: -5%;
+    position: absolute;
+    transform: rotate(-2deg);
+    width: 110%;
+  }
+
+  &:before {
+    top: -3.5rem;
+  }
+
+  &:after {
+    top: 98%;
+  }
+
+  @media screen and (min-width: 750px) {
+    background-size: auto;
+    height: auto;
+  }
+}
+
+.notice-img {
+  display: block;
+  margin: 0 auto;
+  max-width: 700px;
+  width: 95%;
+}
