@@ -1,6 +1,5 @@
 .DS_Store
 .sass-cache
-public
 node_modules
 *.log
 scssReport.xml
