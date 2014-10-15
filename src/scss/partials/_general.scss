@@ -103,15 +103,23 @@ a {
 .btn-tickets {
   background-color: $color-green;
   border-radius: 2px;
+  box-sizing: border-box;
   color: #fff;
+  display: inline-block;
   font-size: 90%;
+  min-width: 5em;
   padding: 0.2em 0.45em;
+  text-align: center;
   text-decoration: none;
 
   &:hover,
   &:focus {
     background-color: darken($color-green, 10%);
   }
+}
+
+.sold-out {
+  background-color: #e9c011;
 }
 
 %slash {
