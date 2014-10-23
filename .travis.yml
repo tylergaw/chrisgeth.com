@@ -1,10 +1,18 @@
 language: node_js
 node_js:
-  - "0.11"
-  - "0.10"
+- '0.11'
+- '0.10'
 before_install:
-  - gem install scss-lint
+- gem install scss-lint
 script: gulp
 matrix:
   allow_failures:
-    - node_js: "0.11"
+  - node_js: '0.11'
+deploy:
+  provider: heroku
+  api_key:
+    secure: P/5i/Pdtt5KHm7t/9LjmLgYv+gruDz8klEgy8WcBhMuUV6+SxDPiRl+IA5N7Nzt0sqwLoIV9IBTG0DWPqRbmUclqayjICP67xtBsfYKsVbPfYwwjZHukm4OyLl/r5niYg6gri9bDkZFWz0sVVdwNL7DtajEVFmZbPDD4GHR/DE0=
+  app: gethard
+  on:
+    repo: tylergaw/chrisgeth.com
+  skip_cleanup: true
