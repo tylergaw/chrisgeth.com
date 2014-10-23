@@ -11,7 +11,6 @@ matrix:
 deploy:
   provider: heroku
   buildpack: ruby
-  strategy: git
   api_key:
     secure: P/5i/Pdtt5KHm7t/9LjmLgYv+gruDz8klEgy8WcBhMuUV6+SxDPiRl+IA5N7Nzt0sqwLoIV9IBTG0DWPqRbmUclqayjICP67xtBsfYKsVbPfYwwjZHukm4OyLl/r5niYg6gri9bDkZFWz0sVVdwNL7DtajEVFmZbPDD4GHR/DE0=
   app: gethard
