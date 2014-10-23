@@ -1,6 +1,7 @@
 {
   "name": "Chrisgeth.com",
   "version": "1.0.0",
+  "repository": "https://github.com/tylergaw/chrisgeth.com",
   "main": "gulpfile.js",
   "devDependencies": {
     "autoprefixer-core": "^3.1.0",
