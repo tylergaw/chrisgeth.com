@@ -1,5 +1,5 @@
 var gulp = require("gulp"),
-  sass = require("gulp-ruby-sass"),
+  sass = require("gulp-sass"),
   plumber = require("gulp-plumber"),
   postcss = require("gulp-postcss"),
   autoprefixer = require("autoprefixer-core"),
@@ -23,7 +23,8 @@ gulp.task("scss", ["scss-lint"], function () {
   return gulp.src(config.src)
     .pipe(plumber())
     .pipe(sass({
-      style: "compressed"
+      sourceMap: false,
+      outputStyle: "compressed"
     }))
     .pipe(postcss([autoprefixer]))
     .pipe(gulp.dest(config.dest));
