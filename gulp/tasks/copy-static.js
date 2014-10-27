@@ -7,7 +7,4 @@ gulp.task("copy-static", function () {
 
   gulp.src(config.images.src)
     .pipe(gulp.dest(config.images.dest));
-
-  gulp.src(config.html.src)
-    .pipe(gulp.dest(config.html.dest));
 });

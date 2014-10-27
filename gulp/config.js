@@ -1,5 +1,5 @@
-var dest = "./public",
-  src = "./src";
+var dest = "./public/assets",
+  src = "./app/assets/src";
 
 module.exports = {
   scss: {

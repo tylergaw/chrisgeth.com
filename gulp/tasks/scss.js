@@ -14,7 +14,7 @@ gulp.task("scss-lint", function () {
     .pipe(scsslint({
       "maxBuffer": 307200,
       "config": "./gulp/scss-lint-config.yml",
-      "reporterOutput": "scssReport.xml",
+      "reporterOutput": "./gulp/scssReport.xml",
       customReport: reporter
     }));
 });
@@ -24,7 +24,7 @@ gulp.task("scss", ["scss-lint"], function () {
     .pipe(plumber())
     .pipe(sass({
       sourceMap: false,
-      outputStyle: "compressed"
+      outputStyle: "nested"
     }))
     .pipe(postcss([autoprefixer]))
     .pipe(gulp.dest(config.dest));
