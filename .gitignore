@@ -1,6 +1,14 @@
 .DS_Store
 .sass-cache
 node_modules
-*.log
+/log/*.log
 scssReport.xml
-public
+/.bundle
+/tmp
+database.yml
+doc/
+*.swp
+*~
+.project
+.idea
+.secret
