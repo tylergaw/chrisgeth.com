@@ -1,0 +1,16 @@
+@function calc-percent($target, $context) {
+  @return ($target / $context) * 100%;
+}
+
+@function getTargetWidth($numCols) {
+  // For every 2 cols, 1 gutter is needed.
+  $totalGutterWidth: (ceil($numCols) - 1) * $gutterWidth;
+  $totalColWidth: $numCols * $colWidth;
+  @return floor($totalColWidth + $totalGutterWidth);
+}
+
+// Grid setup
+$colWidth: 96px;
+$gutterWidth: 10px;
+$cols: 12;
+$containerMaxWidth: 1262px;

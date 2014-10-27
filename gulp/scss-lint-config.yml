@@ -84,7 +84,7 @@ linters:
     convention: hyphenated_lowercase # or 'snake_case', or 'camel_case', or a regex pattern
 
   Shorthand:
-    enabled: true
+    enabled: false
 
   SingleLinePerProperty:
     enabled: true
