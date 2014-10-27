@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   root 'static_pages#home'
-  get 'static_pages/about'
-  get 'static_pages/shows'
+
+  StaticPagesController.action_methods.each do |action|
+    get "/#{action}", to: "static_pages##{action}", as: "#{action}_page"
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
