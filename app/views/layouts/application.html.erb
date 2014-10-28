@@ -9,32 +9,18 @@
   <%= stylesheet_link_tag "/assets/css/app.css" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="<%= yield :body_class %>">
   <header role="banner">
     <h1 class="geth-title">Chris Gethard</h1>
-    <nav role="nav" class="nav-main">
-      <ul>
-        <li>
-          <a href="#">Updates</a>
-        </li>
-        <li>
-          <a href="#">Shows</a>
-        </li>
-        <li>
-          <a href="#">Writing</a>
-        </li>
-        <li>
-          <a href="#">Video</a>
-        </li>
-        <li>
-          <a href="#">Merch</a>
-        </li>
-      </ul>
-    </nav>
+    <%= render "layouts/nav" %>
   </header>
 
   <div role="main">
     <%= yield %>
+
+    <div role="contentinfo">
+      <a href="https://twitter.com/ChrisGethard">Twitter</a> <a href="https://www.facebook.com/gethard">Facebook</a> <a href="http://thechrisgethardshow.com/">TCGS</a>
+    </div>
   </div>
 
 </body>
