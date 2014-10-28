@@ -9,13 +9,12 @@
 }
 
 [role="banner"] {
-  // max-width: $container-max-width;
   overflow: hidden;
   position: relative;
 
   &:before {
     background-color: #fff;
-    content: page-title-text("geth", 50);
+    content: page-title-text("geth", 80);
     display: block;
     font-size: 1rem;
     font-weight: 900;
@@ -35,9 +34,37 @@
   background: transparent url("../images/geth-banner.png") no-repeat center top;
   background-size: 110%;
   line-height: 1;
-  margin: 0;
+  margin: 0 auto;
+  max-width: $container-max-width;
   overflow: hidden;
   padding-top: 78%;
   text-indent: -300em;
   width: 100%;
+}
+
+@media screen and (min-width: 430px) {
+  .geth-title {
+    background-image: url("../images/geth-banner-large-screen.png");
+    background-size: 105%;
+    padding-top: 15%;
+  }
+}
+
+@media screen and (min-width: 490px) {
+  .geth-title {
+    padding-top: 19%;
+  }
+}
+
+@media screen and (min-width: 1360px) {
+  .geth-title {
+    background-size: 100%;
+  }
+}
+
+@media screen and (min-width: 1474px) {
+  .geth-title {
+    height: 312px;
+    padding-top: 0;
+  }
 }
