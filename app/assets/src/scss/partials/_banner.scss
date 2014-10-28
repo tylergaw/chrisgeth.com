@@ -1,4 +1,4 @@
-@function page-title-text($slug, $num) {
+@function page-title-text($slug, $num: 80) {
   $text: "";
 
   @for $i from 0 to $num {
@@ -14,7 +14,7 @@
 
   &:before {
     background-color: #fff;
-    content: page-title-text("geth", 80);
+    content: page-title-text("geth");
     display: block;
     font-size: 1rem;
     font-weight: 900;
@@ -28,6 +28,26 @@
     white-space: nowrap;
     width: 120%;
   }
+}
+
+.page-articles [role="banner"]:before {
+  content: page-title-text("read");
+}
+
+.page-fans [role="banner"]:before {
+  content: page-title-text("you");
+}
+
+.page-merch [role="banner"]:before {
+  content: page-title-text("buy");
+}
+
+.page-shows [role="banner"]:before {
+  content: page-title-text("live");
+}
+
+.page-video [role="banner"]:before {
+  content: page-title-text("watch");
 }
 
 .geth-title {
