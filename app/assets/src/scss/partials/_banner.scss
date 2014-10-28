@@ -1,0 +1,43 @@
+@function page-title-text($slug, $num) {
+  $text: "";
+
+  @for $i from 0 to $num {
+    $text: $text + " " + $slug;
+  }
+
+  @return $text;
+}
+
+[role="banner"] {
+  // max-width: $container-max-width;
+  overflow: hidden;
+  position: relative;
+
+  &:before {
+    background-color: #fff;
+    content: page-title-text("geth", 50);
+    display: block;
+    font-size: 1rem;
+    font-weight: 900;
+    opacity: 0.9;
+    position: absolute;
+    text-indent: -2%;
+    text-shadow: 0 0 1px rgba($color-red, 0.7);
+    text-transform: uppercase;
+    top: -3px;
+    transform: rotate(-0.4deg);
+    white-space: nowrap;
+    width: 120%;
+  }
+}
+
+.geth-title {
+  background: transparent url("../images/geth-banner.png") no-repeat center top;
+  background-size: 110%;
+  line-height: 1;
+  margin: 0;
+  overflow: hidden;
+  padding-top: 78%;
+  text-indent: -300em;
+  width: 100%;
+}

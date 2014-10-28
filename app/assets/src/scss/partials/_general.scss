@@ -1,13 +1,7 @@
-$color-grey: #353535;
-$color-blue: #55b1d0;
-$color-red: #f50025;
-// $width-content: 95%;
-// $width-content-max: 900px;
-
 html,
 body {
   @extend %roboto;
-  background-color: #f9f8f8;
+  background-color: $color-off-white;
   height: 100%;
 }
 
@@ -50,7 +44,7 @@ a {
 .heading-section {
   @extend %roboto;
   color: $color-grey;
-  font-size: 380%;
+  font-size: 320%;
   font-weight: 900;
   line-height: 0.7;
   margin: 0;

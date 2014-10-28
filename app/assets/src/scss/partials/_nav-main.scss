@@ -1,0 +1,35 @@
+.nav-main {
+  border-top: 0.9em solid $color-grey;
+  margin: 0 auto;
+  padding: 0.4em 0;
+  position: relative;
+  text-align: right;
+  top: -1em;
+  width: 99%;
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+    list-style: none;
+  }
+
+  a {
+    color: $color-red;
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: 900;
+    padding: 0.2em 0.4em;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus {
+      background-color: $color-grey;
+      color: $color-off-white;
+    }
+  }
+}
