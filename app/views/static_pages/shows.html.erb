@@ -1,544 +1,466 @@
 <% provide :body_class, "page-shows" %>
-<section class="live-shows">
-  <h1 class="heading-section">Shows on <br>stages</h1>
-  <table>
-    <thead>
-      <tr>
-        <th>Date</th>
-        <th>
-          Venue
-        </th>
-        <th>
-          City
-        </th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
+<h1 class="heading-section">Shows on <br>stages</h1>
+<ul class="list-shows">
+  <% if false %>
+  <li>
+    <td>
+      <time datetime="2014-10-22 15:30">10/22/14</time>
+    </td>
+    <td>
+      <a href="http://www.cmj.com/marathon">
+        CMJ Panel
+        <em class="show-info">w/ Tom Scharpling</em>
+      </a>
+    </td>
+    <td>
+      New York, NY
+    </td>
+    <td>
+      <a href="http://www.cmj.com/marathon/attend" class="btn-tickets">
+        Tickets
+      </a>
+    </td>
+  </li>
 
-      <!-- <tr>
-        <td>
-          <time datetime="2014-10-22 15:30">10/22/14</time>
-        </td>
-        <td>
-          <a href="http://www.cmj.com/marathon">
-            CMJ Panel
-            <em class="show-info">w/ Tom Scharpling</em>
-          </a>
-        </td>
-        <td>
-          New York, NY
-        </td>
-        <td>
-          <a href="http://www.cmj.com/marathon/attend" class="btn-tickets">
-            Tickets
-          </a>
-        </td>
-      </tr>
+  <li>
+    <td>
+      <time datetime="2014-10-23 20:00">10/23/14</time>
+    </td>
+    <td>
+      <a href="https://www.facebook.com/events/727380650644485/">
+        Palisades
+        <em class="show-info">Impose Magazine Show w/ Open Mike Eagle</em>
+      </a>
+    </td>
+    <td>
+      Brooklyn, NY
+    </td>
+    <td>
+      <a href="https://www.facebook.com/events/727380650644485/" class="btn-tickets">
+        Info
+      </a>
+    </td>
+  </li>
+  <% end %>
 
-      <tr>
-        <td>
-          <time datetime="2014-10-23 20:00">10/23/14</time>
-        </td>
-        <td>
-          <a href="https://www.facebook.com/events/727380650644485/">
-            Palisades
-            <em class="show-info">Impose Magazine Show w/ Open Mike Eagle</em>
-          </a>
-        </td>
-        <td>
-          Brooklyn, NY
-        </td>
-        <td>
-          <a href="https://www.facebook.com/events/727380650644485/" class="btn-tickets">
-            Info
-          </a>
-        </td>
-      </tr>
-    -->
-      <tr>
-        <td>
-          <time datetime="2014-10-31">10/31/14</time>
-        </td>
-        <td>
-          <a href="http://thefestfl.com/">
-            The Fest
-          </a>
-        </td>
-        <td>
-          Gainesville, FL
-        </td>
-        <td>
-          <a href="http://thefestfl.com" class="btn-tickets">
-            Info
-          </a>
-        </td>
-      </tr>
+  <li>
+    <a href="#">
+      <h3 class="show-city">Gainesville, FL</h3>
 
-      <tr>
-        <td>
-          <time datetime="2014-11-01">11/01/14</time>
-        </td>
-        <td>
-          <a href="http://thefestfl.com/">
-            The Fest
-          </a>
-        </td>
-        <td>
-          Gainesville, FL
-        </td>
-        <td>
-          <a href="http://thefestfl.com" class="btn-tickets">
-            Info
-          </a>
-        </td>
-      </tr>
+      <time datetime="2014-10-31" class="show-date">Oct. 31 2014</time>
 
-      <tr>
-        <td>
-          <time datetime="2014-11-02">11/02/14</time>
-        </td>
-        <td>
-          <a href="http://thefestfl.com/">
-            The Fest
-          </a>
-        </td>
-        <td>
-          Gainesville, FL
-        </td>
-        <td>
-          <a href="http://thefestfl.com" class="btn-tickets">
-            Info
-          </a>
-        </td>
-      </tr>
+      <h4 class="show-venue">
+        The Fest
+      </4>
 
-      <tr>
-        <td>
-          <time datetime="2014-11-03">11/03/14</time>
-        </td>
-        <td>
-          <a href="http://www.ucbtheatre.com/">
-            UCB
-            <em class="show-info">w/ Tami Sagher</em>
-          </a>
-        </td>
-        <td>
-          New York, NY
-        </td>
-        <td>
-          <a href="http://www.ucbtheatre.com" class="btn-tickets">
-            Info
-          </a>
-        </td>
-      </tr>
+      <h4 data-href="http://thefestfl.com" class="btn-show-details">
+        Details
+      </h4>
+    </a>
+  </li>
 
-      <tr>
-        <td>
-          <time datetime="2014-11-04">11/04/14</time>
-        </td>
-        <td>
-          <a href="http://thechrisgethardshow.tumblr.com/post/97668781771/this-november-i-would-love-to-perform-stand-up-in-your">
-            House Show
-          </a>
-        </td>
-        <td>
-          Philadelphia, PA
-        </td>
-        <td>
-          <a href="http://thechrisgethardshow.tumblr.com/post/97668781771/this-november-i-would-love-to-perform-stand-up-in-your" class="btn-tickets">
-            Info
-          </a>
-        </td>
-      </tr>
+  <li>
+    <a href="#">
+      <h3 class="show-city">Gainesville, FL</h3>
 
-      <tr>
-        <td>
-          <time datetime="2014-11-06">11/06/14</time>
-        </td>
-        <td>
-          <a href="http://thechrisgethardshow.tumblr.com/post/97668781771/this-november-i-would-love-to-perform-stand-up-in-your">
-            House Show
-          </a>
-        </td>
-        <td>
-          New Brunswick, NJ
-        </td>
-        <td>
-          <a href="http://thechrisgethardshow.tumblr.com/post/97668781771/this-november-i-would-love-to-perform-stand-up-in-your" class="btn-tickets">
-            Info
-          </a>
-        </td>
-      </tr>
+      <time datetime="2014-11-01" class="show-date">Nov. 01 2014</time>
 
-      <tr>
-        <td>
-          <time datetime="2014-11-07">11/07/14</time>
-        </td>
-        <td>
-          <a href="http://concerts.livenation.com/event/15004CCF27198D84">
-            Warner Theatre
-            <em class="show-info">opening for Mike Birbiglia</em>
-          </a>
-        </td>
-        <td>
-          Washington, DC
-        </td>
-        <td>
-          <a href="http://concerts.livenation.com/event/15004CCF27198D84" class="btn-tickets sold-out">
-            Sold Out
-          </a>
-        </td>
-      </tr>
+      <h4 class="show-venue">
+        The Fest
+      </4>
 
-      <tr>
-        <td>
-          <time datetime="2014-11-08">11/08/14</time>
-        </td>
-        <td>
-          <a href="http://concerts.livenation.com/event/15004D2510FE6742">
-            Warner Theatre
-            <em class="show-info">opening for Mike Birbiglia</em>
-          </a>
-        </td>
-        <td>
-          Washington, DC
-        </td>
-        <td>
-          <a href="http://concerts.livenation.com/event/15004D2510FE6742" class="btn-tickets">
-            Tickets
-          </a>
-        </td>
-      </tr>
+      <h4 data-href="http://thefestfl.com" class="btn-show-details">
+        Details
+      </h4>
+    </a>
+  </li>
 
-      <tr>
-        <td>
-          <time datetime="2014-11-10">11/10/14</time>
-        </td>
-        <td>
-          <a href="http://thechrisgethardshow.tumblr.com/post/97668781771/this-november-i-would-love-to-perform-stand-up-in-your">
-            House Show
-          </a>
-        </td>
-        <td>
-          Douglaston, NY
-        </td>
-        <td>
-          <a href="http://thechrisgethardshow.tumblr.com/post/97668781771/this-november-i-would-love-to-perform-stand-up-in-your" class="btn-tickets">
-            Info
-          </a>
-        </td>
-      </tr>
+  <li>
+    <a href="#">
+      <h3 class="show-city">Gainesville, FL</h3>
 
-      <tr>
-        <td>
-          <time datetime="2014-11-11">11/11/14</time>
-        </td>
-        <td>
-          <a href="http://thechrisgethardshow.tumblr.com/post/97668781771/this-november-i-would-love-to-perform-stand-up-in-your">
-            House Show
-          </a>
-        </td>
-        <td>
-          New Haven, CT
-        </td>
-        <td>
-          <a href="http://thechrisgethardshow.tumblr.com/post/97668781771/this-november-i-would-love-to-perform-stand-up-in-your" class="btn-tickets">
-            Info
-          </a>
-        </td>
-      </tr>
+      <time datetime="2014-11-02" class="show-date">Nov. 02 2014</time>
 
-      <tr>
-        <td>
-          <time datetime="2014-11-14">11/14/14</time>
-        </td>
-        <td>
-          <a href="http://thechrisgethardshow.tumblr.com/post/97668781771/this-november-i-would-love-to-perform-stand-up-in-your">
-            House Show
-          </a>
-        </td>
-        <td>
-          Ithaca, NY
-        </td>
-        <td>
-          <a href="http://thechrisgethardshow.tumblr.com/post/97668781771/this-november-i-would-love-to-perform-stand-up-in-your" class="btn-tickets">
-            Info
-          </a>
-        </td>
-      </tr>
+      <h4 class="show-venue">
+        The Fest
+      </4>
 
-      <tr>
-        <td>
-          <time datetime="2014-11-17 20:00">11/17/14</time>
-        </td>
-        <td>
-          <a href="http://ev8.evenue.net/cgi-bin/ncommerce3/SEGetEventInfo?ticketCode=GS%3AWAPP%3ACPPC14%3ACPPC1018%3A&linkID=twmt-wapp">
-            The Kennedy Center
-          </a>
-        </td>
-        <td>
-          Washington, DC
-        </td>
-        <td>
-          <a href="http://www.kennedy-center.org/explorer/artists/?entity_id=110267&source_type=B" class="btn-tickets">
-            Tickets
-          </a>
-        </td>
-      </tr>
+      <h4 data-href="http://thefestfl.com" class="btn-show-details">
+        Details
+      </h4>
+    </a>
+  </li>
 
-      <tr>
-        <td>
-          <time datetime="2014-11-18">11/18/14</time>
-        </td>
-        <td>
-          <a href="http://www.ticketmaster.com/mike-birbiglia-orlando-florida-11-18-2014/event/22004CCCB91E6DF3?artistid=942726&majorcatid=10002&minorcatid=51">
-            Hard Rock Live
-            <em class="show-info">opening for Mike Birbiglia</em>
-          </a>
-        </td>
-        <td>
-          Orlando, FL
-        </td>
-        <td>
-          <a href="http://www.ticketmaster.com/mike-birbiglia-orlando-florida-11-18-2014/event/22004CCCB91E6DF3?artistid=942726&majorcatid=10002&minorcatid=51" class="btn-tickets">
-            Tickets
-          </a>
-        </td>
-      </tr>
+  <li>
+    <a href="#">
+      <h3 class="show-city">New York, NY</h3>
 
-      <tr>
-        <td>
-          <time datetime="2014-11-19">11/19/14</time>
-        </td>
-        <td>
-          <a href="http://palmbeachimprov.com/event.cfm?id=321216&cart">
-            The Improv
-            <em class="show-info">opening for Mike Birbiglia</em>
-          </a>
-        </td>
-        <td>
-          West Palm Beach, FL
-        </td>
-        <td>
-          <a href="http://palmbeachimprov.com/event.cfm?id=321216&cart" class="btn-tickets">
-            Tickets
-          </a>
-        </td>
-      </tr>
+      <time datetime="2014-11-03" class="show-date">Nov. 03 2014</time>
 
-      <tr>
-        <td>
-          <time datetime="2014-11-20">11/20/14</time>
-        </td>
-        <td>
-          <a href="http://www.arshtcenter.org/Tickets/Calendar/2014-2015-Season/Live-at-Knight/Mike-Birbiglia/">
-            Knight Concert Hall
-            <em class="show-info">opening for Mike Birbiglia</em>
-          </a>
-        </td>
-        <td>
-          Miami, FL
-        </td>
-        <td>
-          <a href="http://www.arshtcenter.org/Tickets/Calendar/2014-2015-Season/Live-at-Knight/Mike-Birbiglia/" class="btn-tickets">
-            Tickets
-          </a>
-        </td>
-      </tr>
+      <h4 class="show-venue">
+        UCB
+      </4>
 
-      <tr>
-        <td>
-          <time datetime="2014-11-21">11/21/14</time>
-        </td>
-        <td>
-          <a href="http://tickets.themahaffey.com/single/selectSeating.aspx?p=982">
-            Mahaffey Theater
-            <em class="show-info">opening for Mike Birbiglia</em>
-          </a>
-        </td>
-        <td>
-          St. Petersburg, FL
-        </td>
-        <td>
-          <a href="http://tickets.themahaffey.com/single/selectSeating.aspx?p=982" class="btn-tickets">
-            Tickets
-          </a>
-        </td>
-      </tr>
+      <h5 class="show-info-excerpt">with Tami Sagher</h5>
 
-      <tr>
-        <td>
-          <time datetime="2014-11-22">11/22/14</time>
-        </td>
-        <td>
-          <a href="http://www.ticketmaster.com/event/22004CCDB2517C1D">
-            Florida Theater
-            <em class="show-info">opening for Mike Birbiglia</em>
-          </a>
-        </td>
-        <td>
-          Jacksonville, FL
-        </td>
-        <td>
-          <a href="http://www.ticketmaster.com/event/22004CCDB2517C1D" class="btn-tickets">
-            Tickets
-          </a>
-        </td>
-      </tr>
+      <h4 data-href="http://www.ucbtheatre.com" class="btn-show-details">
+        Details
+      </h4>
+    </a>
+  </li>
 
-      <tr>
-        <td>
-          <time datetime="2014-11-25">11/25/14</time>
-        </td>
-        <td>
-          <a href="http://thechrisgethardshow.tumblr.com/post/97668781771/this-november-i-would-love-to-perform-stand-up-in-your">
-            House Show
-          </a>
-        </td>
-        <td>
-          West Orange, NJ
-        </td>
-        <td>
-          <a href="http://thechrisgethardshow.tumblr.com/post/97668781771/this-november-i-would-love-to-perform-stand-up-in-your" class="btn-tickets">
-            Info
-          </a>
-        </td>
-      </tr>
+  <li>
+    <a href="#">
+      <h3 class="show-city">Philadelphia, PA</h3>
 
-      <tr>
-        <td>
-          <time datetime="2014-11-29">11/29/14</time>
-        </td>
-        <td>
-          <a href="http://thechrisgethardshow.tumblr.com/post/97668781771/this-november-i-would-love-to-perform-stand-up-in-your">
-            House Show
-          </a>
-        </td>
-        <td>
-          Baltimore, MD
-        </td>
-        <td>
-          <a href="http://thechrisgethardshow.tumblr.com/post/97668781771/this-november-i-would-love-to-perform-stand-up-in-your" class="btn-tickets">
-            Info
-          </a>
-        </td>
-      </tr>
+      <time datetime="2014-11-04" class="show-date">Nov. 04 2014</time>
 
-      <tr>
-        <td>
-          <time datetime="2015-01-29">1/29/15</time>
-        </td>
-        <td>
-          <a href="http://upcomedyclub.com">
-            UP Comedy Club
-          </a>
-        </td>
-        <td>
-          Chicago, IL
-        </td>
-        <td>
-          <a href="http://upcomedyclub.com" class="btn-tickets">
-            Info
-          </a>
-        </td>
-      </tr>
+      <h4 class="show-venue">
+        House Show
+      </4>
 
-      <tr>
-        <td>
-          <time datetime="2015-01-30">1/30/15</time>
-        </td>
-        <td>
-          <a href="http://upcomedyclub.com">
-            UP Comedy Club
-          </a>
-        </td>
-        <td>
-          Chicago, IL
-        </td>
-        <td>
-          <a href="http://upcomedyclub.com" class="btn-tickets">
-            Info
-          </a>
-        </td>
-      </tr>
+      <h4 data-href="http://thechrisgethardshow.tumblr.com/post/97668781771/this-november-i-would-love-to-perform-stand-up-in-your" class="btn-show-details">
+        Details
+      </h4>
+    </a>
+  </li>
 
-      <tr>
-        <td>
-          <time datetime="2015-01-31">1/31/15</time>
-        </td>
-        <td>
-          <a href="http://upcomedyclub.com">
-            UP Comedy Club
-          </a>
-        </td>
-        <td>
-          Chicago, IL
-        </td>
-        <td>
-          <a href="http://upcomedyclub.com" class="btn-tickets">
-            Info
-          </a>
-        </td>
-      </tr>
+  <li>
+    <a href="#">
+      <h3 class="show-city">New Brunswick, NJ</h3>
 
-      <tr>
-        <td>
-          <time datetime="2015-05-23">5/23/15</time>
-        </td>
-        <td>
-          <a href="http://www.sasquatchfestival.com/">
-            Sasquatch Festival
-          </a>
-        </td>
-        <td>
-          Quincy, WA
-        </td>
-        <td>
-          <a href="http://www.sasquatchfestival.com/" class="btn-tickets sold-out">
-            Sold Out
-          </a>
-        </td>
-      </tr>
+      <time datetime="2014-11-06" class="show-date">Nov. 06 2014</time>
 
-      <tr>
-        <td>
-          <time datetime="2015-05-24">5/24/15</time>
-        </td>
-        <td>
-          <a href="http://www.sasquatchfestival.com/">
-            Sasquatch Festival
-          </a>
-        </td>
-        <td>
-          Quincy, WA
-        </td>
-        <td>
-          <a href="http://www.sasquatchfestival.com/" class="btn-tickets sold-out">
-            Sold Out
-          </a>
-        </td>
-      </tr>
+      <h4 class="show-venue">
+        House Show
+      </4>
 
-      <tr>
-        <td>
-          <time datetime="2015-05-25">5/25/15</time>
-        </td>
-        <td>
-          <a href="http://www.sasquatchfestival.com/">
-            Sasquatch Festival
-          </a>
-        </td>
-        <td>
-          Quincy, WA
-        </td>
-        <td>
-          <a href="http://www.sasquatchfestival.com/" class="btn-tickets sold-out">
-            Sold Out
-          </a>
-        </td>
-      </tr>
+      <h4 data-href="http://thechrisgethardshow.tumblr.com/post/97668781771/this-november-i-would-love-to-perform-stand-up-in-your" class="btn-show-details">
+        Details
+      </h4>
+    </a>
+  </li>
 
-    </tbody>
-  </table>
-</section>
+  <li class="show-sold-out">
+    <a href="#">
+      <em class="sold-out-banner">Sold out</em>
+
+      <h3 class="show-city">Washington, DC</h3>
+
+      <time datetime="2014-11-07" class="show-date">Nov. 07 2014</time>
+
+      <h4 class="show-venue">
+        Warner Theatre
+      </4>
+
+      <h5 class="show-info-excerpt">opening for Mike Birbiglia</h5>
+
+      <h4 data-href="http://concerts.livenation.com/event/15004CCF27198D84" class="btn-show-details">
+        Details
+      </h4>
+    </a>
+  </li>
+
+  <li>
+    <a href="#">
+      <h3 class="show-city">Washington, DC</h3>
+
+      <time datetime="2014-11-08" class="show-date">Nov. 08 2014</time>
+
+      <h4 class="show-venue">
+        Warner Theatre
+      </4>
+
+      <h5 class="show-info-excerpt">opening for Mike Birbiglia</h5>
+
+      <h4 data-href="http://concerts.livenation.com/event/15004D2510FE6742" class="btn-show-details">
+        Details
+      </h4>
+    </a>
+  </li>
+
+  <li>
+    <a href="#">
+      <h3 class="show-city">Douglaston, NY</h3>
+
+      <time datetime="2014-11-10" class="show-date">Nov. 10 2014</time>
+
+      <h4 class="show-venue">
+        House Show
+      </4>
+
+      <h4 data-href="http://thechrisgethardshow.tumblr.com/post/97668781771/this-november-i-would-love-to-perform-stand-up-in-your" class="btn-show-details">
+        Details
+      </h4>
+    </a>
+  </li>
+
+  <li>
+    <a href="#">
+      <h3 class="show-city">New Haven, CT</h3>
+
+      <time datetime="2014-11-11" class="show-date">Nov. 11 2014</time>
+
+      <h4 class="show-venue">
+        House Show
+      </4>
+
+      <h4 data-href="http://thechrisgethardshow.tumblr.com/post/97668781771/this-november-i-would-love-to-perform-stand-up-in-your" class="btn-show-details">
+        Details
+      </h4>
+    </a>
+  </li>
+
+  <li>
+    <a href="#">
+      <h3 class="show-city">Ithaca, NY</h3>
+
+      <time datetime="2014-11-14" class="show-date">Nov. 14 2014</time>
+
+      <h4 class="show-venue">
+        House Show
+      </4>
+
+      <h4 data-href="http://thechrisgethardshow.tumblr.com/post/97668781771/this-november-i-would-love-to-perform-stand-up-in-your" class="btn-show-details">
+        Details
+      </h4>
+    </a>
+  </li>
+
+  <li>
+    <a href="#">
+      <h3 class="show-city">Washington, DC</h3>
+
+      <time datetime="2014-11-17" class="show-date">Nov. 17 2014</time>
+
+      <h4 class="show-venue">
+        The Kennedy Center
+      </4>
+
+      <h4 data-href="http://www.kennedy-center.org/explorer/artists/?entity_id=110267&source_type=B" class="btn-show-details">
+        Details
+      </h4>
+    </a>
+  </li>
+
+  <li>
+    <a href="#">
+      <h3 class="show-city">Orlando, FL</h3>
+
+      <time datetime="2014-11-18" class="show-date">Nov. 18 2014</time>
+
+      <h4 class="show-venue">
+        Hard Rock Live
+      </4>
+
+      <h5 class="show-info-excerpt">opening for Mike Birbiglia</h5>
+
+      <h4 data-href="http://www.ticketmaster.com/mike-birbiglia-orlando-florida-11-18-2014/event/22004CCCB91E6DF3?artistid=942726&majorcatid=10002&minorcatid=51" class="btn-show-details">
+        Details
+      </h4>
+    </a>
+  </li>
+
+  <li>
+    <a href="#">
+      <h3 class="show-city">West Palm Beach, FL</h3>
+
+      <time datetime="2014-11-19" class="show-date">Nov. 19 2014</time>
+
+      <h4 class="show-venue">
+        The Improv
+      </4>
+
+      <h5 class="show-info-excerpt">opening for Mike Birbiglia</h5>
+
+      <h4 data-href="http://palmbeachimprov.com/event.cfm?id=321216&cart" class="btn-show-details">
+        Details
+      </h4>
+    </a>
+  </li>
+
+  <li>
+    <a href="#">
+      <h3 class="show-city">Miami, FL</h3>
+
+      <time datetime="2014-11-20" class="show-date">Nov. 20 2014</time>
+
+      <h4 class="show-venue">
+        Knight Concert Hall
+      </4>
+
+      <h5 class="show-info-excerpt">opening for Mike Birbiglia</h5>
+
+      <h4 data-href="http://www.arshtcenter.org/Tickets/Calendar/2014-2015-Season/Live-at-Knight/Mike-Birbiglia" class="btn-show-details">
+        Details
+      </h4>
+    </a>
+  </li>
+
+  <li>
+    <a href="#">
+      <h3 class="show-city">St. Petersburg, FL</h3>
+
+      <time datetime="2014-11-21" class="show-date">Nov. 21 2014</time>
+
+      <h4 class="show-venue">
+        Mahaffey Theater
+      </4>
+
+      <h5 class="show-info-excerpt">opening for Mike Birbiglia</h5>
+
+      <h4 data-href="http://tickets.themahaffey.com/single/selectSeating.aspx?p=982" class="btn-show-details">
+        Details
+      </h4>
+    </a>
+  </li>
+
+  <li>
+    <a href="#">
+      <h3 class="show-city">Jacksonville, FL</h3>
+
+      <time datetime="2014-11-22" class="show-date">Nov. 22 2014</time>
+
+      <h4 class="show-venue">
+        Florida Theater
+      </4>
+
+      <h5 class="show-info-excerpt">opening for Mike Birbiglia</h5>
+
+      <h4 data-href="http://www.ticketmaster.com/event/22004CCDB2517C1D" class="btn-show-details">
+        Details
+      </h4>
+    </a>
+  </li>
+
+  <li>
+    <a href="#">
+      <h3 class="show-city">West Orange, NJ</h3>
+
+      <time datetime="2014-11-25" class="show-date">Nov. 25 2014</time>
+
+      <h4 class="show-venue">
+        House Show
+      </4>
+
+      <h4 data-href="http://thechrisgethardshow.tumblr.com/post/97668781771/this-november-i-would-love-to-perform-stand-up-in-your" class="btn-show-details">
+        Details
+      </h4>
+    </a>
+  </li>
+
+  <li>
+    <a href="#">
+      <h3 class="show-city">Baltimore, MD</h3>
+
+      <time datetime="2014-11-29" class="show-date">Nov. 29 2014</time>
+
+      <h4 class="show-venue">
+        House Show
+      </4>
+
+      <h4 data-href="http://thechrisgethardshow.tumblr.com/post/97668781771/this-november-i-would-love-to-perform-stand-up-in-your" class="btn-show-details">
+        Details
+      </h4>
+    </a>
+  </li>
+
+  <li>
+    <a href="#">
+      <h3 class="show-city">Chicago, IL</h3>
+
+      <time datetime="2015-01-29" class="show-date">Jan. 29 2015</time>
+
+      <h4 class="show-venue">
+        UP Comedy Club
+      </4>
+
+      <h4 data-href="http://upcomedyclub.com" class="btn-show-details">
+        Details
+      </h4>
+    </a>
+  </li>
+
+  <li>
+    <a href="#">
+      <h3 class="show-city">Chicago, IL</h3>
+
+      <time datetime="2015-01-30" class="show-date">Jan. 30 2015</time>
+
+      <h4 class="show-venue">
+        UP Comedy Club
+      </4>
+
+      <h4 data-href="http://upcomedyclub.com" class="btn-show-details">
+        Details
+      </h4>
+    </a>
+  </li>
+
+  <li>
+    <a href="#">
+      <h3 class="show-city">Chicago, IL</h3>
+
+      <time datetime="2015-01-31" class="show-date">Jan. 31 2015</time>
+
+      <h4 class="show-venue">
+        UP Comedy Club
+      </4>
+
+      <h4 data-href="http://upcomedyclub.com" class="btn-show-details">
+        Details
+      </h4>
+    </a>
+  </li>
+
+  <li class="show-sold-out">
+    <a href="#">
+      <em class="sold-out-banner">Sold out</em>
+      <h3 class="show-city">Quincy, WA</h3>
+
+      <time datetime="2015-05-23" class="show-date">May 23 2015</time>
+
+      <h4 class="show-venue">
+        Sasquatch Festival
+      </4>
+
+      <h4 data-href="http://www.sasquatchfestival.com" class="btn-show-details">
+        Details
+      </h4>
+    </a>
+  </li>
+
+  <li class="show-sold-out">
+    <a href="#">
+      <em class="sold-out-banner">Sold out</em>
+      <h3 class="show-city">Quincy, WA</h3>
+
+      <time datetime="2015-05-24" class="show-date">May 24 2015</time>
+
+      <h4 class="show-venue">
+        Sasquatch Festival
+      </4>
+
+      <h4 data-href="http://www.sasquatchfestival.com" class="btn-show-details">
+        Details
+      </h4>
+    </a>
+  </li>
+
+  <li class="show-sold-out">
+    <a href="#">
+      <em class="sold-out-banner">Sold out</em>
+      <h3 class="show-city">Quincy, WA</h3>
+
+      <time datetime="2015-05-25" class="show-date">May 25 2015</time>
+
+      <h4 class="show-venue">
+        Sasquatch Festival
+      </4>
+
+      <h4 data-href="http://www.sasquatchfestival.com" class="btn-show-details">
+        Details
+      </h4>
+    </a>
+  </li>
+</ul>
