@@ -1,0 +1,117 @@
+.list-shows {
+  list-style: none outside;
+  overflow: hidden;
+  padding: 2em 0 0 0;
+
+  li {
+    display: block;
+  }
+}
+
+.show-btn {
+  border-top: 4px solid $color-blue;
+  display: block;
+  overflow: hidden;
+  padding: 1.4em 0.25em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    background-color: rgba($color-blue, 0.1);
+
+    .show-details-btn {
+      color: #fff;
+    }
+  }
+}
+
+.show-sold-out {
+  .show-btn {
+    opacity: 0.7;
+  }
+}
+
+.sold-out-banner {
+  background-color: $color-red;
+  color: #fff;
+  display: inline-block;
+  left: -2em;
+  padding: 2.6em 0.9em 0 0.9em;
+  position: absolute;
+  top: -1.4em;
+  transform: rotate(-40deg);
+  z-index: 100;
+}
+
+.show-city {
+  font-size: 1.8em;
+  font-weight: 900;
+  line-height: 1;
+  margin: 0;
+}
+
+.show-date {
+  display: block;
+  font-size: 1.2em;
+  font-weight: 700;
+  line-height: 1.4;
+  padding: 0.6em 0;
+
+  &:before,
+  &:after {
+    content: "  \2605  \2605  \2605  ";
+    font-size: 80%;
+  }
+}
+
+.show-venue {
+  font-family: georgia, times, serif;
+  font-size: 1.6em;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  margin: 0;
+}
+
+.show-info-excerpt {
+  margin: 0;
+}
+
+.show-details-btn {
+  background-color: $color-blue;
+  border-radius: 2px;
+  color: $color-off-white;
+  display: inline-block;
+  font-size: 1.3em;
+  font-weight: 700;
+  margin: 0.4em 0 0 0;
+  padding: 0 0.3em;
+
+  &:after {
+    content: " >"
+  }
+}
+
+@media screen and (min-width: 520px) {
+  .list-shows {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      width: 50%;
+    }
+  }
+
+  .show-btn {
+    border-top: 0;
+    padding: 1.8em 0.5em;
+  }
+}
+
+@media screen and (min-width: 820px) {
+  .list-shows li {
+    width: 33.33%;
+  }
+}
