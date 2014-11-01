@@ -9,7 +9,7 @@
 }
 
 .show-btn {
-  border-top: 4px solid $color-blue;
+  border-top: 3px solid $color-blue;
   display: block;
   overflow: hidden;
   padding: 1.4em 0.25em;
@@ -28,21 +28,20 @@
   }
 }
 
-.show-sold-out {
-  .show-btn {
-    opacity: 0.7;
-  }
-}
-
 .sold-out-banner {
-  background-color: $color-red;
-  color: #fff;
+  @extend %roboto-cond;
+  background-color: $color-yellow;
+  box-sizing: border-box;
+  color: #000;
   display: inline-block;
-  left: -2em;
-  padding: 2.6em 0.9em 0 0.9em;
+  font-size: 80%;
+  font-weight: 700;
+  left: -10%;
+  padding: 0 0.2em;
   position: absolute;
-  top: -1.4em;
-  transform: rotate(-40deg);
+  top: 0.5em;
+  transform: rotate(-5deg);
+  width: 120%;
   z-index: 100;
 }
 
@@ -76,21 +75,29 @@
 }
 
 .show-info-excerpt {
-  margin: 0;
+  font-size: 1.1em;
+  font-style: italic;
+  margin: 0 0 0.2em 0;
 }
 
 .show-details-btn {
   background-color: $color-blue;
-  border-radius: 2px;
+  border-radius: 3px;
   color: $color-off-white;
   display: inline-block;
-  font-size: 1.3em;
+  font-size: 1.1em;
   font-weight: 700;
   margin: 0.4em 0 0 0;
-  padding: 0 0.3em;
+  padding: 0.3em 0.6em;
+  position: relative;
 
   &:after {
-    content: " >"
+    content: "\25B6";
+    display: inline-block;
+    font-size: 60%;
+    line-height: 2;
+    padding-left: 0.2em;
+    vertical-align: top;
   }
 }
 
