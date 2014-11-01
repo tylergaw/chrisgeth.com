@@ -1,19 +1,23 @@
 language: node_js
 node_js:
-- '0.11'
 - '0.10'
 before_install:
-- gem install scss-lint
+  - sudo apt-get install -y python-software-properties
+  - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
+  - sudo apt-get update
+  - sudo apt-get install -y gcc-4.8 g++-4.8
+  - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 50
+  - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 50
+  - gem install scss-lint
 script: gulp
-matrix:
-  allow_failures:
-  - node_js: '0.11'
 deploy:
   provider: heroku
   buildpack: ruby
   api_key:
     secure: P/5i/Pdtt5KHm7t/9LjmLgYv+gruDz8klEgy8WcBhMuUV6+SxDPiRl+IA5N7Nzt0sqwLoIV9IBTG0DWPqRbmUclqayjICP67xtBsfYKsVbPfYwwjZHukm4OyLl/r5niYg6gri9bDkZFWz0sVVdwNL7DtajEVFmZbPDD4GHR/DE0=
-  app: gethard
+  app:
+    master: gethard
+    staging: staging-gethard
   on:
     repo: tylergaw/chrisgeth.com
   skip_cleanup: true
