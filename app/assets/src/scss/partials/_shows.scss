@@ -5,6 +5,10 @@
 
   li {
     display: block;
+
+    &:hover {
+      background-color: lighten($color-blue, 42);
+    }
   }
 }
 
@@ -12,7 +16,7 @@
   border-top: 3px solid $color-blue;
   display: block;
   overflow: hidden;
-  padding: 1.4em 0.25em;
+  padding: 2em 0.25em;
   position: relative;
   text-align: center;
   text-decoration: none;
@@ -20,7 +24,7 @@
 
   &:hover,
   &:focus {
-    background-color: rgba($color-blue, 0.1);
+    background-color: lighten($color-blue, 42);
 
     .show-details-btn {
       color: #fff;
@@ -95,13 +99,13 @@
     content: "\25B6";
     display: inline-block;
     font-size: 60%;
-    line-height: 2;
+    line-height: 2.2;
     padding-left: 0.2em;
     vertical-align: top;
   }
 }
 
-@media screen and (min-width: 520px) {
+@media screen and (min-width: 530px) {
   .list-shows {
     display: flex;
     flex-wrap: wrap;
@@ -113,7 +117,7 @@
 
   .show-btn {
     border-top: 0;
-    padding: 1.8em 0.5em;
+    padding: 2.5em 0.5em;
   }
 }
 
