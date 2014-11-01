@@ -37,6 +37,16 @@
   }
 }
 
+.page-news .nav-main a[href*="news"],
+.page-shows .nav-main a[href*="shows"],
+.page-articles .nav-main a[href*="articles"],
+.page-video .nav-main a[href*="video"],
+.page-merch .nav-main a[href*="merch"] {
+  background-color: $color-grey;
+  color: $color-off-white;
+  cursor: default;
+}
+
 @media screen and (min-width: 490px) {
   .nav-main {
     font-size: 1.1em;
@@ -44,5 +54,11 @@
     ul {
       top: -1.55em;
     }
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .nav-main {
+    font-size: 1.3em;
   }
 }
