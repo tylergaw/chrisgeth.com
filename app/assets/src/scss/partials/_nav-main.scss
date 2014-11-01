@@ -6,7 +6,6 @@
   padding: 0.4em 0;
   position: relative;
   text-align: right;
-  top: -0.7em;
   width: 99%;
 
   ul {
@@ -35,12 +34,6 @@
       background-color: $color-grey;
       color: $color-off-white;
     }
-  }
-}
-
-@media screen and (min-width: 430px) {
-  .nav-main {
-    top: 0;
   }
 }
 
