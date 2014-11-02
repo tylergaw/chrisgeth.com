@@ -10,17 +10,19 @@
   <%= csrf_meta_tags %>
 </head>
 <body class="<%= yield :body_class %>">
-  <header role="banner">
-    <a href="./" class="geth-title"><h1>Chris Gethard</h1></a>
-    <%= render "layouts/nav" %>
-  </header>
+  <div class="container-content">
+    <header role="banner">
+      <a href="./" class="geth-title"><h1>Chris Gethard</h1></a>
+      <%= render "layouts/nav" %>
+    </header>
 
-  <div role="main">
-    <%= yield %>
-
-    <div role="contentinfo">
-      <a href="https://twitter.com/ChrisGethard">Twitter</a> <a href="https://www.facebook.com/gethard">Facebook</a> <a href="http://thechrisgethardshow.com/">TCGS</a>
+    <div role="main">
+      <%= yield %>
     </div>
+  </div>
+
+  <div role="contentinfo">
+    <a href="https://twitter.com/ChrisGethard">Twitter</a> <a href="https://www.facebook.com/gethard">Facebook</a> <a href="http://thechrisgethardshow.com/">TCGS</a>
   </div>
 
 </body>

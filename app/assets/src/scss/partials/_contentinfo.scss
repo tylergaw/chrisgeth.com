@@ -1,0 +1,27 @@
+[role="contentinfo"] {
+  @extend %roboto-cond;
+  box-sizing: border-box;
+  font-size: 100%;
+  font-weight: 700;
+  margin: 0 auto;
+  max-width: get-target-width(12);
+  
+  // padding: 1em 0;
+  // text-align: right;
+  // text-transform: uppercase;
+  // transform: rotate(-1deg);
+
+  // a {
+  //   border-bottom: 3px solid #f9f8f8;
+  //   text-decoration: none;
+  //
+  //   &:hover,
+  //   &:focus {
+  //     border-bottom-color: $color-blue;
+  //   }
+  //
+  //   &:after {
+  //     @extend %slash;
+  //   }
+  // }
+}
