@@ -14,7 +14,7 @@ class StaticPagesController < ApplicationController
   def articles
   end
 
-  def video
+  def videos
   end
 
   def merch

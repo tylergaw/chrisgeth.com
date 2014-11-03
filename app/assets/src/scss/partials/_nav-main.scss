@@ -5,7 +5,7 @@
   max-width: get-target-width(12);
   padding: 0.4em 0;
   position: relative;
-  text-align: right;
+  text-align: center;
   width: 99%;
 
   ul {
@@ -50,6 +50,7 @@
 @media screen and (min-width: 490px) {
   .nav-main {
     font-size: 1.1em;
+    text-align: right;
 
     ul {
       top: -1.55em;

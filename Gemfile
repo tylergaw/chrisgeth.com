@@ -6,6 +6,8 @@ gem 'rails', '4.1.6'
 gem 'jbuilder', '2.2.3'
 gem 'rails-html-sanitizer', '1.0.1'
 gem 'sdoc', '0.4.0', group: :doc
+gem 'twitter', '5.12.0'
+gem 'twitter-text', '1.10.0'
 
 group :development, :test do
   gem 'sqlite3', '1.3.9'

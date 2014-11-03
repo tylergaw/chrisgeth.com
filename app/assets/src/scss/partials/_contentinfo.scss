@@ -1,27 +1,80 @@
 [role="contentinfo"] {
-  @extend %roboto-cond;
+  $padding-lr: calc-percent(get-target-width(0.5), $container-max-width);
   box-sizing: border-box;
-  font-size: 100%;
-  font-weight: 700;
+  color: $color-off-white;
+  font-weight: 300;
   margin: 0 auto;
   max-width: get-target-width(12);
-  
-  // padding: 1em 0;
-  // text-align: right;
-  // text-transform: uppercase;
-  // transform: rotate(-1deg);
+  overflow: hidden;
+  padding: 2em $padding-lr 2em $padding-lr;
+  position: relative;
 
-  // a {
-  //   border-bottom: 3px solid #f9f8f8;
-  //   text-decoration: none;
-  //
-  //   &:hover,
-  //   &:focus {
-  //     border-bottom-color: $color-blue;
-  //   }
-  //
-  //   &:after {
-  //     @extend %slash;
-  //   }
-  // }
+  a {
+    color: $color-green;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+.nav-footer {
+  ul {
+    list-style: none outside;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  li {
+    display: inline-block;
+  }
+}
+
+.tweet {
+  padding-top: 2em;
+  max-width: get-target-width(5);
+  overflow: hidden;
+}
+
+.tweet-avatar {
+  border-radius: 50%;
+  display: inline-block;
+  float: left;
+  max-width: get-target-width(0.55);
+  overflow: hidden;
+  transition: transform 100ms;
+  width: 18%;
+
+  img {
+    display: block;
+    transition: transform 100ms;
+    width: 100%;
+  }
+
+  &:hover,
+  &:focus {
+    transform: rotate(-10deg);
+
+    img {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.tweet-content {
+  box-sizing: border-box;
+  float: left;
+  padding-left: 5%;
+  width: 80%;
+}
+
+.tweet-text {
+  margin: 0 0 0.5em 0;
+}
+
+.tweet-time {
+  font-size: 85%;
 }
