@@ -22,30 +22,32 @@
   </div>
 
   <div role="contentinfo">
-    <nav role="navigation" class="nav-footer nav-secondary">
-      <ul>
-        <li>
-          <%= link_to "About", about_path %>
-        </li>
-        <li>
-          <%= link_to "Fans", fans_path %>
-        </li>
-      </ul>
-    </nav>
+    <div class="this-column-does-something-different">
+      <nav role="navigation" class="nav-footer nav-secondary">
+        <ul>
+          <li>
+            <%= link_to "About", about_path %> •
+          </li>
+          <li>
+            <%= link_to "Fans", fans_path %>
+          </li>
+        </ul>
+      </nav>
 
-    <nav role="navigation" class="nav-footer nav-external">
-      <ul>
-        <li>
-          <%= link_to "Twitter", "https://twitter.com/ChrisGethard" %>
-        </li>
-        <li>
-          <%= link_to "Facebook", "https://www.facebook.com/gethard" %>
-        </li>
-        <li>
-          <%= link_to "TCGS", "http://thechrisgethardshow.com" %>
-        </li>
-      </ul>
-    </nav>
+      <nav role="navigation" class="nav-footer nav-external">
+        <ul>
+          <li>
+            <%= link_to "Twitter", "https://twitter.com/ChrisGethard" %>
+          </li>
+          <li>
+            <%= link_to "Facebook", "https://www.facebook.com/gethard" %>
+          </li>
+          <li>
+            <%= link_to "TCGS", "http://thechrisgethardshow.com" %>
+          </li>
+        </ul>
+      </nav>
+    </div>
 
     <div class="tweet">
       <a class="tweet-avatar" href="<%= @tweet.user.url %>">

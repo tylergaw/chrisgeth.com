@@ -17,21 +17,23 @@ a {
   box-sizing: border-box;
   margin: 0 auto;
   max-width: get-target-width(12);
+}
 
-  // padding: 0 calc-percent(get-target-width(0.5), $container-max-width);
+.page-content {
+  padding: 0 calc-percent(get-target-width(0.5), $container-max-width);
 }
 
 .heading-section {
-  @extend %roboto;
+  @extend %roboto-cond;
   color: $color-grey;
-  font-size: 320%;
-  font-weight: 900;
-  line-height: 0.7;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.1;
   margin: 0;
-  text-align: right;
-  text-indent: -0.2em;
-  text-transform: uppercase;
-  // transform: rotate(-1.2deg);
+}
 
-  display: none;
+.page-intro {
+  font-size: 1.2em;
+  font-weight: 300;
+  line-height: 1.5;
 }
