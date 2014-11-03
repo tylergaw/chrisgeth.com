@@ -1,7 +1,8 @@
 .DS_Store
 .sass-cache
 node_modules
-/public/assets
+/public/css
+/public/images
 /log/*.log
 scssReport.xml
 /.bundle

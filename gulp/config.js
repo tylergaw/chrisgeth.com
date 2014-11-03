@@ -1,4 +1,4 @@
-var dest = "./public/assets",
+var dest = "./public",
   src = "./app/assets/src";
 
 module.exports = {
