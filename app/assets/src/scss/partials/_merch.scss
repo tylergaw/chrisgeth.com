@@ -1,0 +1,46 @@
+.merch-items {
+  list-style: none outside;
+  margin: 0;
+  overflow: hidden;
+  padding: 0 calc-percent(get-target-width(0.5), $container-max-width);
+}
+
+.merch-item {
+  box-sizing: border-box;
+  text-align: center;
+  padding-bottom: 2em;
+}
+
+.merch-link-main {
+  display: block;
+
+  img {
+    width: 100%;
+  }
+}
+
+.merch-item-title {
+  font-size: 2em;
+  font-weight: 900;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.merch-item-desc {
+  margin: 0;
+}
+
+@media screen and (min-width: 600px) {
+  .merch-item {
+    float: left;
+    padding: 0 1em 1.4em 1em;
+  }
+
+  .merch-item-album {
+    width: 60%;
+  }
+
+  .merch-item-book {
+    width: 40%;
+  }
+}
