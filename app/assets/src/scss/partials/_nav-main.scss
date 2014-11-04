@@ -1,6 +1,7 @@
 .nav-main {
+  box-sizing: border-box;
   font-size: 1.4em;
-  margin: 0 auto;
+  margin: 0 auto 0.6em auto;
   max-width: get-target-width(12);
   padding: 0;
   position: relative;
