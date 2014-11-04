@@ -20,46 +20,7 @@ a {
 }
 
 .page-content {
-  padding: 0 calc-percent(get-target-width(0.5), $container-max-width);
-}
-
-.page-title {
-  @extend %roboto-cond;
-  background-color: $color-grey;
-  box-sizing: border-box;
-  color: $color-off-white;
-  font-size: 3.4em;
-  font-weight: 700;
-  line-height: 1.1;
-  margin: 0 auto;
-  padding: 0.4em 0.2em 0.5em 0.2em;
-  position: relative;
-  text-align: center;
-  z-index: 100;
-
-  @media screen and (min-width: 490px) {
-    background-color: transparent;
-    border-bottom: 2px solid lighten($color-grey, 70);
-    color: $color-grey;
-    font-size: 3em;
-    padding-bottom: 0.7em;
-    width: 99%;
-
-    &:before {
-      background-color: transparent;
-      background-image: url("../images/heading-willem.png");
-      background-size: 99%;
-      background-repeat: no-repeat;
-      content: " ";
-      display: block;
-      height: get-target-width(1.5);
-      left: 0;
-      max-width: get-target-width(1.1);
-      position: absolute;
-      top: -0.85em;
-      width: calc-percent(get-target-width(2), get-target-width(12));
-    }
-  }
+  padding: 1em calc-percent(get-target-width(0.5), $container-max-width);
 }
 
 .page-intro {
