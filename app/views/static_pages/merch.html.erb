@@ -7,24 +7,44 @@
       alt: "The cover of My Comedy Album"),
       "http://dongiovannirecords.com/product/115-my-comedy-album",
       class: "merch-link-main" %>
-    <h3 class="merch-item-title">My Album</h3>
-    <p class="merch-item-desc">
-      This is my first ever album. I’m really proud of it. I think it represents
-      a lot of the work I’ve been doing on stage and where I’m at as a solo artist circa the end of 2013.
-      Many TCGS fans have consistently said that they wish they knew more about
-      my solo work. Well this is your chance!
-    </p>
+
+    <div class="merch-item-details">
+      <h3 class="merch-item-title">My Album</h3>
+      <p class="merch-item-desc">
+        This is my first ever album. I’m really proud of it. I think it represents
+        a lot of the work I’ve been doing on stage and where I’m at as a solo artist circa the end of 2013.
+        Many TCGS fans have consistently said that they wish they knew more about
+        my solo work. Well this is your chance!
+      </p>
+      <p class="merch-item-links">
+        You can find it on:<br>
+
+        <%= link_to "Don Giovanni", "http://dongiovannirecords.com/product/115-my-comedy-album",
+          class: "button" %>
+        &amp;
+        <%= link_to "iTunes", "https://itunes.apple.com/us/album/my-comedy-album/id804235512?ls=1",
+          class: "button" %>
+      </p>
+    </div>
   </li>
   <li class="merch-item merch-item-book">
     <%= link_to image_tag("a-bad-idea-im-about-to-do-by-gethard.jpg",
       alt: "The cover of A Bad Idea I'm About to Do"),
       "http://www.amazon.com/Bad-Idea-About-Seriously-Stunningly/dp/0306820307",
       class: "merch-link-main" %>
-    <h3 class="merch-item-title">My Book</h3>
-    <p class="merch-item-desc">
-      Hi Chris. What do you think about writing a short paragraph that we could
-      put here? Something similar to the album where you talk about what the book
-      means to you and why you think all humans should read it.
-    </p>
+
+    <div class="merch-item-details">
+      <h3 class="merch-item-title">My Book</h3>
+      <p class="merch-item-desc">
+        Hi Chris. What do you think about writing a short paragraph that we could
+        put here? Something similar to the album where you talk about what the book
+        means to you and why you think all humans should read it.
+      </p>
+      <p class="merch-item-links">
+        You can find it on:<br>
+        <%= link_to "Amazon", "http://www.amazon.com/Bad-Idea-About-Seriously-Stunningly/dp/0306820307",
+          class: "button" %>
+      </p>
+    </div>
   </li>
 </ul>

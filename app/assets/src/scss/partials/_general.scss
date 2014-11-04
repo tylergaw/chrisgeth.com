@@ -37,3 +37,19 @@ a {
   font-weight: 300;
   line-height: 1.5;
 }
+
+.button {
+  background-color: $color-blue;
+  border-radius: 3px;
+  color: $color-off-white;
+  display: inline-block;
+  font-weight: 700;
+  padding: 0.3em 0.6em;
+  position: relative;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    background-color: darken($color-blue, 15);
+  }
+}
