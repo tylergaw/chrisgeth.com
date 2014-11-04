@@ -58,9 +58,21 @@
   margin: 0 auto;
   max-width: $container-max-width;
   overflow: hidden;
-  padding-top: 62%;
+  padding-top: 50%;
   text-indent: -300em;
   width: 100%;
+}
+
+@media screen and (min-width: 220px) {
+  .geth-title {
+    padding-top: 60%;
+  }
+}
+
+@media screen and (min-width: 325px) {
+  .geth-title {
+    padding-top: 67%;
+  }
 }
 
 @media screen and (min-width: 430px) {
@@ -77,13 +89,19 @@
   }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 582px) {
   .geth-title {
     padding-top: 12%;
   }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 750px) {
+  .geth-title {
+    padding-top: 14%;
+  }
+}
+
+@media screen and (min-width: 990px) {
   .geth-title {
     padding-top: 15%;
   }

@@ -1,15 +1,13 @@
 .nav-main {
-  border-top: 0.6em solid $color-grey;
-  font-size: 1.4rem;
+  font-size: 1.4em;
   margin: 0 auto;
   max-width: get-target-width(12);
-  padding: 0.4em 0;
+  padding: 0;
   position: relative;
   text-align: center;
   width: 99%;
 
   ul {
-    background-color: $color-off-white;
     display: inline-block;
     margin: 0;
     padding: 0;
@@ -22,7 +20,7 @@
   }
 
   a {
-    color: $color-red;
+    color: $color-blue;
     display: inline-block;
     font-weight: 900;
     padding: 0.2em 0.4em;
@@ -31,8 +29,9 @@
 
     &:hover,
     &:focus {
-      background-color: $color-grey;
-      color: $color-off-white;
+      background-color: lighten($color-blue, 35);
+      // background-color: $color-grey;
+      // color: $color-off-white;
     }
   }
 }
@@ -49,17 +48,20 @@
 
 @media screen and (min-width: 490px) {
   .nav-main {
+    $offset: -1.2em;
+    border-top: 0.6em solid $color-grey;
     font-size: 1.1em;
-    margin-bottom: -1.55em;
+    margin-bottom: $offset;
     text-align: right;
 
     ul {
-      top: -1.55em;
+      background-color: $color-off-white;
+      top: $offset;
     }
   }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 750px) {
   .nav-main {
     font-size: 1.3em;
   }

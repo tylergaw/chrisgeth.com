@@ -23,13 +23,17 @@ a {
   padding: 0 calc-percent(get-target-width(0.5), $container-max-width);
 }
 
-.heading-section {
+.page-title {
   @extend %roboto-cond;
-  color: $color-grey;
-  font-size: 4rem;
+  background-color: $color-grey;
+  color: $color-off-white;
+  font-size: 3.4em;
   font-weight: 700;
   line-height: 1.1;
+  // margin: 0.2em 0 0 0;
   margin: 0;
+  padding: 0.4em 0.2em 0.5em 0.2em;
+  text-align: center;
 }
 
 .page-intro {
