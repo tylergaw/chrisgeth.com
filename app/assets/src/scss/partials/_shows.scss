@@ -14,17 +14,23 @@
 }
 
 .show-btn {
-  border-top: 3px solid $color-blue;
   display: block;
   overflow: hidden;
-  padding: 2em 0.25em;
+  padding: 2.3em 0.25em;
   position: relative;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
 
-  &:first-child {
-    border-top: 0;
+  &:after {
+    background-color: $color-blue;
+    display: block;
+    content: "";
+    height: 8px;
+    margin: 0 auto;
+    position: relative;
+    top: 2.3em;
+    width: 3.5em;
   }
 
   &:hover,
@@ -125,6 +131,10 @@
   .show-btn {
     border-top: 0;
     padding: 2.5em 0.5em;
+
+    &:after {
+      top: 2.5em;
+    }
   }
 }
 
