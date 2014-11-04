@@ -22,4 +22,7 @@ class StaticPagesController < ApplicationController
 
   def fans
   end
+
+  def purpose
+  end
 end
