@@ -24,9 +24,12 @@ a {
 }
 
 .page-intro {
-  font-size: 1.2em;
+  font-size: 1.4em;
   font-weight: 300;
   line-height: 1.5;
+  margin: 0 auto;
+  max-width: get-target-width(10);
+  text-align: center;
 }
 
 .button {
