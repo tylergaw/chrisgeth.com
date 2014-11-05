@@ -1,2 +1,71 @@
 <% provide :body_class, "page-articles" %>
 <h1 class="page-title">These Are Important To Me</h1>
+<div class="page-content">
+  <p class="page-intro">
+    I'm thinking it might be good to give an introduction here. A short
+    paragraph that explains why write and that these are articles that are real
+    good and people should read if they don't want to be dummies.
+  </p>
+
+  <ul class="articles-list">
+    <li class="article">
+      <time class="article-date" datetime="2014-08-12">Aug. 12 2014</time>
+
+      <%= link_to image_tag("http://pixel.nymag.com/imgs/daily/vulture/2014/08/12/robin-williams/12-robin-williams-stand-up-2012.o.jpg/a_610x408.jpg"),
+        "http://www.vulture.com/2014/08/what-it-was-like-to-do-improv-with-robin-williams.html",
+        class: "article-image" %>
+
+
+      <a href="http://www.vulture.com/2014/08/what-it-was-like-to-do-improv-with-robin-williams.html"
+        class="article-title">
+        <h3>What It Was Like to Do Surprise Improv With Robin Williams</h3>
+      </a>
+
+      <p class="article-excerpt">
+        I feel like this area could either be a few sentence excerpt from the
+        article. Or it could be a place for you to give some thoughts about
+        the article.
+      </p>
+    </li>
+
+    <li class="article">
+      <time class="article-date" datetime="2014-08-12">May 4 2013</time>
+
+      <%= link_to image_tag("http://assets.vice.com/content-images/contentimage/no-slug/9281052d443dcdfde11fefed95c22c84.jpg"),
+        "http://www.vice.com/read/why-i-quit-drinking",
+        class: "article-image" %>
+
+
+      <a href="http://www.vice.com/read/why-i-quit-drinking"
+        class="article-title">
+        <h3>Why I Quit Drinking</h3>
+      </a>
+
+      <p class="article-excerpt">
+        I feel like this area could either be a few sentence excerpt from the
+        article. Or it could be a place for you to give some thoughts about
+        the article.
+      </p>
+    </li>
+
+    <li class="article">
+      <time class="article-date" datetime="2014-08-12">June 23 2013</time>
+
+      <%= link_to image_tag("http://assets.vice.com/content-images/contentimage/no-slug/409004e312f286e10ad9e7af19126acb.jpg"),
+        "http://www.vice.com/read/learning-about-humanity-on-public-transportation",
+        class: "article-image" %>
+
+
+      <a href="http://www.vice.com/read/learning-about-humanity-on-public-transportation"
+        class="article-title">
+        <h3>Learning About Humanity on Public Transportation</h3>
+      </a>
+
+      <p class="article-excerpt">
+        I feel like this area could either be a few sentence excerpt from the
+        article. Or it could be a place for you to give some thoughts about
+        the article.
+      </p>
+    </li>
+  </ul>
+</div>
