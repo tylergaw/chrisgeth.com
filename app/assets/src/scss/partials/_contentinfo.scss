@@ -65,7 +65,7 @@
   text-transform: uppercase;
 
   li {
-    padding: 0 0.6em;
+    padding: 0 1%;
   }
 
   a {
@@ -99,12 +99,19 @@
   box-sizing: border-box;
   margin-top: 1.4em;
   overflow: hidden;
-  padding: 1em;
+  padding: 0.8em 1em;
   text-align: left;
 }
 
 .tweet-title {
+  @extend %roboto-cond;
+  font-size: 1.1em;
+  font-weight: 700;
   margin: 0 0 0.7em 0;
+
+  a {
+    color: $color-off-white;
+  }
 }
 
 .tweet-avatar {
