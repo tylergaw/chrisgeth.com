@@ -2,15 +2,15 @@
   $padding-lr: calc-percent(get-target-width(0.5), $container-max-width);
   box-sizing: border-box;
   color: $color-off-white;
-  font-weight: 300;
+  font-weight: 400;
   margin: 0 auto;
   max-width: get-target-width(12);
-  overflow: hidden;
-  padding: 2em $padding-lr 2em $padding-lr;
+  padding: 2.5em $padding-lr 4em $padding-lr;
   position: relative;
+  text-align: center;
 
   a {
-    color: $color-green;
+    color: $color-red;
     text-decoration: none;
 
     &:hover,
@@ -18,14 +18,39 @@
       text-decoration: underline;
     }
   }
+
+  &:before {
+    background: url("../images/heading-apache.png");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    content: "";
+    display: block;
+    height: get-target-width(2);
+    left: 34%;
+    max-width: get-target-width(1.6);
+    position: absolute;
+    top: -3.5em;
+    width: calc-percent(get-target-width(4), get-target-width(12));
+  }
+
+  @media screen and (min-width: 560px) {
+    overflow: hidden;
+
+    &:before {
+      top: 40%;
+      left: 85%;
+    }
+  }
 }
 
 .nav-footer {
+  position: relative;
+
   ul {
     list-style: none outside;
     margin: 0;
     padding: 0;
-    text-align: center;
   }
 
   li {
@@ -33,71 +58,102 @@
   }
 }
 
-.this-column-does-something-different {
-  max-width: get-target-width(6);
+.nav-secondary {
+  color: darken($color-off-white, 40);
+  font-size: 1.2em;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  li {
+    padding: 0 0.6em;
+  }
+
+  a {
+    border-bottom: 4px solid transparent;
+    display: inline-block;
+    text-shadow: 0 2px 0 darken($color-off-white, 80);
+
+    &:hover,
+    &:focus {
+      border-color: $color-red;
+      text-decoration: none;
+    }
+  }
+}
+
+.nav-external {
+  margin-top: 1.6em;
+
+  li {
+    padding: 0 0.5em;
+  }
+
+  .nav-tcgs {
+    display: block;
+    margin-bottom: 0.8em;
+  }
 }
 
 .tweet {
-  max-width: get-target-width(5);
+  background-color: rgba($color-off-white, 0.08);
+  box-sizing: border-box;
+  margin-top: 1.4em;
   overflow: hidden;
-  padding-top: 2em;
+  padding: 1em;
+  text-align: left;
+}
+
+.tweet-title {
+  margin: 0 0 0.7em 0;
 }
 
 .tweet-avatar {
-  border-radius: 50%;
   display: inline-block;
   float: left;
   max-width: get-target-width(0.55);
   overflow: hidden;
-  transition: transform 100ms;
   width: 18%;
 
   img {
     display: block;
-    transition: transform 100ms;
     width: 100%;
-  }
-
-  &:hover,
-  &:focus {
-    transform: rotate(-10deg);
-
-    img {
-      transform: scale(1.1);
-    }
   }
 }
 
 .tweet-content {
   box-sizing: border-box;
   float: left;
-  padding-left: 5%;
+  padding-left: 4%;
   width: 80%;
 }
 
 .tweet-text {
+  line-height: 1.45;
   margin: 0 0 0.5em 0;
 }
 
 .tweet-time {
   font-size: 85%;
+  font-weight: 300;
 }
 
-@media screen and (min-width: 580px) {
-  .this-column-does-something-different {
-    float: right;
-    width: 50%;
-  }
-
-  .nav-footer {
-    ul {
-      text-align: right;
-    }
-  }
-
+@media screen and (min-width: 560px) {
   .tweet {
     float: left;
-    padding-top: 0;
+    margin-top: 0;
+    max-width: get-target-width(3.5);
+    width: 42%;
+  }
+
+  .this-column-does-something-different {
+    box-sizing: border-box;
+    float: right;
+    margin-right: 8%;
+    text-align: right;
     width: 50%;
+  }
+
+  .nav-external {
+    margin-top: 1em;
   }
 }

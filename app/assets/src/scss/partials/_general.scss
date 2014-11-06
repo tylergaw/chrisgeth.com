@@ -1,12 +1,31 @@
 html,
 body {
   @extend %roboto;
-  background-color: $color-grey;
+  background-color: darken($color-off-white, 80);
   height: 100%;
 }
 
 .container-content {
+  $border-size: 6px;
   background-color: $color-off-white;
+  border-bottom: $border-size solid $color-red;
+  position: relative;
+
+  &:after {
+    background-color: darken($color-off-white, 80);
+    border-top: $border-size solid $color-red;
+    top: 99.8%;
+    content: "";
+    display: block;
+    height: 60px;
+    position: absolute;
+    transform: skewY(-1deg);
+    width: 100%;
+
+    @media screen and (min-width: 800px) {
+      transform: skewY(-0.5deg);
+    }
+  }
 }
 
 a {

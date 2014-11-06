@@ -26,10 +26,10 @@
       <nav role="navigation" class="nav-footer nav-secondary">
         <ul>
           <li>
-            <%= link_to "Fans", fans_path %> •
+            <%= link_to "Fans", fans_path %>
           </li>
           <li>
-            <%= link_to "About", about_path %> •
+            <%= link_to "About", about_path %>
           </li>
           <li>
             <%= link_to "Purpose", purpose_path %>
@@ -39,20 +39,21 @@
 
       <nav role="navigation" class="nav-footer nav-external">
         <ul>
-          <li>
-            <%= link_to "Twitter", "https://twitter.com/ChrisGethard" %>
+          <li class="nav-tcgs">
+            <%= link_to render("layouts/contentinfo/icon_tcgs"), "http://thechrisgethardshow.com" %>
           </li>
           <li>
-            <%= link_to "Facebook", "https://www.facebook.com/gethard" %>
+            <%= link_to render("layouts/contentinfo/icon_twitter"), "https://twitter.com/ChrisGethard" %>
           </li>
           <li>
-            <%= link_to "TCGS", "http://thechrisgethardshow.com" %>
+            <%= link_to render("layouts/contentinfo/icon_facebook"), "https://www.facebook.com/gethard" %>
           </li>
         </ul>
       </nav>
     </div>
 
     <div class="tweet">
+      <h3 class="tweet-title">@ChrisGethard</h3>
       <a class="tweet-avatar" href="<%= @tweet.user.url %>">
         <img src="<%= @tweet.user.profile_image_url %>" alt="Geth Avatar">
       </a>
@@ -67,6 +68,17 @@
         </a>
       </div>
     </div>
+
+    <!-- <div class="tinyletter">
+      <form action="https://tinyletter.com/tylergaw" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/tylergaw', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+        <div>
+          <label for="tlemail">Email</label>
+          <input type="email" name="email" id="tlemail">
+        </div>
+        <input type="hidden" value="1" name="embed">
+        <input type="submit" value="Subscribe">
+      </form>
+    </div> -->
   </div>
 
 </body>
