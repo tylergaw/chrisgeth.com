@@ -11,8 +11,10 @@
   position: relative;
   text-align: center;
   z-index: 100;
+}
 
-  @media screen and (min-width: 490px) {
+@media screen and (min-width: 490px) {
+  .page-title {
     background-color: transparent;
     border-bottom: 2px solid lighten($color-grey, 70);
     color: $color-grey;
@@ -20,9 +22,7 @@
     padding-bottom: 0.7em;
     width: 99%;
   }
-}
 
-@media screen and (min-width: 490px) {
   .title-character {
     &:before {
       background-color: transparent;
@@ -56,6 +56,22 @@
       background-image: url("../images/heading-rickman.png");
       background-size: 100%;
       max-width: get-target-width(1.2);
+    }
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .page-title {
+    font-size: 3.8em;
+  }
+
+  .title-character {
+    &:before {
+      height: get-target-width(2);
+      left: 0;
+      max-width: get-target-width(1.4);
+      top: -0.9em;
+      width: calc-percent(get-target-width(2), get-target-width(12));
     }
   }
 }
