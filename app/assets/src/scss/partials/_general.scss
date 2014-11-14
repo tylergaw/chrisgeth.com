@@ -54,7 +54,10 @@ a {
   &:first-letter {
     color: $color-red;
     font-family: georgia;
+    font-size: 170%;
     font-weight: bold;
+    line-height: 0;
+    position: relative;
   }
 
   @media screen and (min-width: 620px) {
