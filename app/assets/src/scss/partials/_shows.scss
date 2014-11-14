@@ -40,6 +40,13 @@
     .show-details-btn {
       color: #fff;
     }
+
+    .show-date {
+      &:before,
+      &:after {
+        color: $color-red;
+      }
+    }
   }
 }
 
