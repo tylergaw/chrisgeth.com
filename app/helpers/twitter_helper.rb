@@ -10,6 +10,5 @@ module TwitterHelper
   def get_latest_tweet
     @tweet = tw_client.user_timeline('chrisgethard', :count => 1)[0]
     @tweet_url = "https://twitter.com/#{@tweet.user.screen_name}/status/#{@tweet.id}"
-    # puts @tweet.to_yaml
   end
 end
