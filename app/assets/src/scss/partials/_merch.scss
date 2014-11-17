@@ -3,7 +3,7 @@
   margin: 0 auto;
   max-width: get-target-width(9.2);
   overflow: hidden;
-  padding: 2em calc-percent(get-target-width(0.5), $container-max-width);
+  padding: 0 calc-percent(get-target-width(0.5), $container-max-width);
 }
 
 .merch-item {
