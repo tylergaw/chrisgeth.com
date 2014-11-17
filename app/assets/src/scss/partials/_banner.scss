@@ -27,6 +27,7 @@
     transform: rotate(-0.4deg);
     white-space: nowrap;
     width: 120%;
+    z-index: 1;
   }
 }
 
@@ -59,8 +60,10 @@
   max-width: $container-max-width;
   overflow: hidden;
   padding-top: 50%;
+  position: relative;
   text-indent: -300em;
   width: 100%;
+  z-index: 3;
 }
 
 @media screen and (min-width: 220px) {
@@ -89,7 +92,7 @@
   }
 }
 
-@media screen and (min-width: 582px) {
+@media screen and (min-width: 576px) {
   .geth-title {
     padding-top: 12%;
   }
@@ -109,9 +112,9 @@
 
 @media screen and (min-width: 1050px) {
   .geth-title {
-    background-position: center -1em;
+    background-position: center -0.5em;
     background-size: 100%;
-    padding-top: 13%;
+    padding-top: 14%;
   }
 }
 

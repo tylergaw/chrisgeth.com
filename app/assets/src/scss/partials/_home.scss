@@ -1,0 +1,38 @@
+.page-home {
+  .container-content {
+    background: $color-off-white url("../images/home-posse.jpg") no-repeat center -1em;
+    background-size: 240%;
+  }
+
+  [role="banner"] {
+    padding-top: 38%;
+
+    &:after {
+      background: transparent url("../images/home-chris.png") no-repeat center top;
+      background-size: 100%;
+      content: "";
+      display: block;
+      height: 728px;
+      left: 22%;
+      position: absolute;
+      top: 0.3em;
+      width: calc-percent(360px, 610px);
+      z-index: 2;
+    }
+  }
+
+  @media screen and (min-width: 430px) {
+    .container-content {
+      background-size: 103%;
+    }
+
+    [role="banner"] {
+      padding-top: 23%;
+
+      &:after {
+        left: 37%;
+        width: calc-percent(360px, $container-max-width);
+      }
+    }
+  }
+}
