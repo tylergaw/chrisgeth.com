@@ -51,10 +51,13 @@ a {
 
   &:first-letter {
     color: $color-red;
+    display: block;
+    float: left;
     font-family: georgia;
-    font-size: 170%;
-    font-weight: bold;
-    line-height: 0;
+    font-size: 290%;
+    font-weight: 900;
+    line-height: 1;
+    padding: 0 0.3em 0 0;
     position: relative;
   }
 
