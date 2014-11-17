@@ -15,7 +15,7 @@
 .article-image {
   display: block;
   margin: 0.5em auto;
-  max-height: 18em;
+  max-height: 16em;
   max-width: get-target-width(7);
   overflow: hidden;
   width: 100%;
@@ -36,16 +36,22 @@
 }
 
 .article-title {
-  font-size: 1.5em;
+  font-size: 1.65em;
   font-weight: 900;
-  line-height: 1.1;
+  line-height: 1.35;
   margin: 0.3em 0 0 0;
   padding: 0;
   text-transform: uppercase;
 
   a {
+    border-bottom: 4px solid $color-off-white;
     color: $color-red;
     text-decoration: none;
+
+    &:hover,
+    &:focus {
+      border-color: $color-red;
+    }
   }
 }
 
@@ -70,7 +76,7 @@
 
   .article-title {
     font-size: 2.2em;
-    padding: 0 1em;
+    padding: 0 0.4em;
   }
 
   .article-excerpt {
@@ -78,7 +84,7 @@
   }
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 760px) {
   .articles-list {
     display: flex;
     flex-wrap: wrap;
@@ -89,7 +95,7 @@
     padding-left: 1.5em;
     padding-right: 1.5em;
     text-align: left;
-    width: 50%;
+    width: calc-percent(get-target-width(6), get-target-width(12));
   }
 
   .article-title {
@@ -97,6 +103,7 @@
   }
 
   .article-excerpt {
+    font-size: 1.2em;
     padding: 0;
   }
 }
