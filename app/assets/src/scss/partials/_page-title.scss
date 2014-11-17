@@ -1,11 +1,15 @@
-.page-title {
+%page-title-text {
   @extend %roboto-cond;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.page-title {
+  @extend %page-title-text;
   background-color: $color-grey;
   box-sizing: border-box;
   color: $color-off-white;
   font-size: 3.4em;
-  font-weight: 700;
-  line-height: 1.1;
   margin: 0 auto;
   padding: 0.4em 0.2em 0.5em 0.2em;
   position: relative;

@@ -1,40 +1,59 @@
 <% provide :body_class, "page-about" %>
-<h1 class="page-title">Who Is This Guy?</h1>
-<div class="page-content">
-  <p class="about-intro">
-    Chris Gethard is a comedian. He's been doing stuff in New York City for
-    about fifteen years now. Occasionally he pokes his head into some mainstream
-    stuff - maybe you've seen him do small parts on shows like The Office, Parks
-    and Recreation, Broad City, and Louie. He's also been in movies like
-    The Other Guys and The Heat. He also once had a sitcom on Comedy Central that
-    he was the star of that got canceled very quickly.
-  </p>
-  <p>
-    He also likes doing a lot of stuff that's smaller scale and more on his
-    terms and stays a little bit in the underground. For example, he does a ton
-    of stand up and tours all over and you can find his show dates (at this link).
-    And he wrote a book. And put out an album on Don Giovanni Records, which is
-    one of his all time favorite music labels ever.
-  </p>
-  <p>
-    He is also the host and creator of THE CHRIS GETHARD SHOW, which is his pride
-    and joy. It's a public access television show that airs live every Wednesday
-    night and that gets pretty out of the box. It's heartfelt and at times strange
-    and at times very funny and it features good guests and very great bands.
-    Every Wednesday Chris hangs out with some of his best friends and they take
-    calls from sad kids all over the world and dance like idiots and just have a
-    good time.
-  </p>
-  <p>
-    Every once in a while Chris will do a weird project aimed at being amongst
-    people, like the time he walked across the country crashing on the floors of
-    his fans (and also strangers who were confused by him) or how he sometimes
-    organizes stand up shows that take place in peoples' actual homes.
-  </p>
-  <p>
-    Basically, Chris is a guy who tries to be funny and driven and do things
-    his own way. He sort of has a chip on his shoulder and for a generally quiet
-    nerdy guy can sometimes have a feeling of semi-self-righteous anger driving
-    his work. It's all good.
-  </p>
+
+<div class="page-about-content">
+  <div class="about-content-main">
+    <h1 class="about-page-title">Who Is This Guy?</h1>
+    <p class="about-intro">
+      Chris Gethard is a comedian. He's been doing stuff in New York City for
+      about fifteen years now. Occasionally he pokes his head into some mainstream
+      stuff - maybe you've seen him do small parts on shows like The Office, Parks
+      and Recreation, Broad City, and Louie. He's also been in movies like
+      The Other Guys and The Heat. He also once had a sitcom on Comedy Central that
+      he was the star of that got canceled very quickly.
+    </p>
+    <div class="about-bio-container">
+      <p>
+        He also likes doing a lot of stuff that's smaller scale and more on his
+        terms and stays a little bit in the underground. For example, he does a ton
+        of stand up and tours all over and you can find his show dates (at this link).
+        And he wrote a book. And put out an album on Don Giovanni Records, which is
+        one of his all time favorite music labels ever.
+      </p>
+      <p>
+        He is also the host and creator of <a href="">THE CHRIS GETHARD SHOW</a>, which is his pride
+        and joy. It's a public access television show that airs live every Wednesday
+        night and that gets pretty out of the box. It's heartfelt and at times strange
+        and at times very funny and it features good guests and very great bands.
+        Every Wednesday Chris hangs out with some of his best friends and they take
+        calls from sad kids all over the world and dance like idiots and just have a
+        good time.
+      </p>
+      <p>
+        Every once in a while Chris will do a weird project aimed at being amongst
+        people, like the time he walked across the country crashing on the floors of
+        his fans (and also strangers who were confused by him) or how he sometimes
+        organizes stand up shows that take place in peoples' actual homes.
+      </p>
+      <p>
+        Basically, Chris is a guy who tries to be funny and driven and do things
+        his own way. He sort of has a chip on his shoulder and for a generally quiet
+        nerdy guy can sometimes have a feeling of semi-self-righteous anger driving
+        his work. It's all good.
+      </p>
+    </div>
+  </div>
+  <div class="about-content-secondary">
+    <div class="about-portrait">
+      <%= image_tag("about-geth.png", alt: "Stylized portrait of Chris Gethard") %>
+      <h3 class="about-portrait-duh">
+        This is <br><span>Chris</span>
+      </h3>
+    </div>
+    <blockquote class="about-pull-quote">
+      <p>
+        ...and for a generally quiet nerdy guy can sometimes have a feeling
+        of semi-self-righteous anger driving his work.
+      </p>
+    </blockquote>
+  </div>
 </div>

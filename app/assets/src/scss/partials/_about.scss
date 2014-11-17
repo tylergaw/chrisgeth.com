@@ -1,0 +1,105 @@
+.page-about-content {
+  @extend %clearfix;
+  position: relative;
+  z-index: 10;
+
+  a {
+    font-weight: 700;
+  }
+}
+
+.about-page-title {
+  @extend %page-title-text;
+  font-size: 3.4em;
+  margin-bottom: 0.4em;
+  position: relative;
+
+  &:before {
+    background: transparent url("../images/about-arrows.png") no-repeat center center;
+    background-size: 100%;
+    content: "";
+    display: block;
+    height: 100px;
+    position: absolute;
+    left: -#{get-target-width(1.2)};
+    top: 0;
+    width: calc-percent(get-target-width(1), get-target-width(6));
+    z-index: 1;
+  }
+}
+
+.about-content-main {
+  box-sizing: border-box;
+  float: right;
+  font-size: 1.2em;
+  font-weight: 300;
+  line-height: 1.5;
+  padding-right: 1.5em;
+  padding-bottom: 3em;
+  position: relative;
+  width: calc-percent(get-target-width(7), get-target-width(12));
+  z-index: 2;
+}
+
+.about-intro {
+  font-size: 1.1em;
+  font-weight: 400;
+}
+
+.about-bio-container {
+  padding-left: calc-percent(get-target-width(1), get-target-width(7));
+}
+
+.about-content-secondary {
+  float: left;
+  position: absolute;
+  top: -12em;
+  width: calc-percent(get-target-width(5.8), get-target-width(12));
+}
+
+.about-portrait {
+  overflow: hidden;
+  position: relative;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.about-portrait-duh {
+  bottom: 0.4em;
+  color: $color-off-white;
+  font-size: 5.5vw;
+  font-weight: 700;
+  left: -0.1em;
+  letter-spacing: 0.75em;
+  line-height: 1.8;
+  margin: 0;
+  position: absolute;
+  text-transform: uppercase;
+  white-space: nowrap;
+  z-index: 2;
+
+  span {
+    letter-spacing: 1.25em;
+  }
+}
+
+.about-pull-quote {
+  @extend %roboto-cond;
+  border-right: 10px solid $color-red;
+  box-sizing: border-box;
+  color: $color-red;
+  // font-size: 3vw;
+  font-size: 2.4em;
+  font-weight: 700;
+  margin: 0 0.4em 0 0;
+  padding: 0 1em;
+  position: relative;
+  text-align: right;
+
+  p {
+    margin: 0;
+  }
+}

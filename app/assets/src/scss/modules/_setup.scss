@@ -24,3 +24,11 @@ $container-max-width: 1474px;
   $total-col-width: $num-cols * $col-width;
   @return floor($total-col-width + $total-gutter-width);
 }
+
+%clearfix {
+  &:after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
