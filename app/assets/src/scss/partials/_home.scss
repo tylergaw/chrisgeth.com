@@ -7,6 +7,10 @@
   [role="banner"] {
     padding-top: 38%;
 
+    &:before {
+      z-index: 1;
+    }
+
     &:after {
       background: transparent url("../images/home-chris.png") no-repeat center top;
       background-size: 100%;
@@ -14,6 +18,7 @@
       display: block;
       height: 728px;
       left: 22%;
+      max-width: 360px;
       position: absolute;
       top: 0.3em;
       width: calc-percent(360px, 610px);
@@ -33,6 +38,18 @@
         left: 37%;
         width: calc-percent(360px, $container-max-width);
       }
+    }
+  }
+
+  @media screen and (min-width: 1450px) {
+    [role="banner"] {
+      padding-top: 334px;
+    }
+  }
+
+  @media screen and (min-width: 1700px) {
+    .container-content {
+      background-size: 1740px;
     }
   }
 }
