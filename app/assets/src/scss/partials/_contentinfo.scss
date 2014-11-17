@@ -5,7 +5,7 @@
   font-weight: 400;
   margin: 0 auto;
   max-width: get-target-width(12);
-  padding: 2.5em $padding-lr 1.8em $padding-lr;
+  padding: 2.5em $padding-lr 2em $padding-lr;
   position: relative;
   text-align: center;
 
@@ -39,7 +39,7 @@
 
     &:before {
       top: 40%;
-      left: 85%;
+      left: 70%;
     }
   }
 }
@@ -145,17 +145,21 @@
 }
 
 @media screen and (min-width: 560px) {
+  [role="contentinfo"] {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
+
   .tweet {
     float: left;
     margin-top: 0;
-    max-width: get-target-width(3.5);
-    width: 42%;
+    max-width: get-target-width(4);
+    width: 45%;
   }
 
   .this-column-does-something-different {
     box-sizing: border-box;
     float: right;
-    margin-right: 8%;
     text-align: right;
     width: 50%;
   }
