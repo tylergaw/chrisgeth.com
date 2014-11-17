@@ -2,7 +2,7 @@
   list-style: none outside;
   margin: 0 auto;
   max-width: get-target-width(8);
-  padding: 0;
+  padding: 3em 0 1.4em 0;
 
   li {
     padding-bottom: 3em;
@@ -23,7 +23,7 @@
       text-indent: $indent;
 
       &:before {
-        color: lighten($color-grey, 50);
+        color: $color-red;
         content: "“";
         display: inline-block;
         font-family: georgia;
