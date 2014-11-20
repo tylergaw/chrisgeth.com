@@ -39,7 +39,7 @@ a {
 }
 
 .page-content {
-  padding: 1em calc-percent(get-target-width(0.5), $container-max-width);
+  padding: $gutter-padding;
 }
 
 .page-intro {

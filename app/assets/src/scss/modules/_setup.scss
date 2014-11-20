@@ -25,6 +25,8 @@ $container-max-width: 1474px;
   @return floor($total-col-width + $total-gutter-width);
 }
 
+$gutter-padding: calc-percent(get-target-width(0.5), $container-max-width);
+
 %clearfix {
   &:after {
     clear: both;

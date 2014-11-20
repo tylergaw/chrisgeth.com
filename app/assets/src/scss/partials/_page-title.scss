@@ -4,7 +4,7 @@
   line-height: 1.1;
 }
 
-.page-title {
+%page-title-inverse {
   @extend %page-title-text;
   background-color: $color-grey;
   box-sizing: border-box;
@@ -15,6 +15,10 @@
   position: relative;
   text-align: center;
   z-index: 100;
+}
+
+.page-title {
+  @extend %page-title-inverse;
 }
 
 @media screen and (min-width: 520px) {
