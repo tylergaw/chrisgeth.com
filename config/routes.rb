@@ -1,9 +1,16 @@
 Rails.application.routes.draw do
   root 'static_pages#home'
 
-  StaticPagesController.action_methods.each do |action|
-    get "/#{action}", to: "static_pages##{action}"
-  end
+  get "/news", to: "static_pages#news"
+  get "/articles", to: "static_pages#articles"
+  get "/videos", to: "static_pages#videos"
+  get "/merch", to: "static_pages#merch"
+
+  get "/fans", to: "static_pages#fans"
+  get "/about", to: "static_pages#about"
+  get "/purpose", to: "static_pages#purpose"
+
+  resources :shows, only: [:index, :show]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

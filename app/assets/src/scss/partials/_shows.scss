@@ -2,7 +2,7 @@
   list-style: none outside;
   margin: 0;
   overflow: hidden;
-  padding: 0;
+  padding: 0 0 4em 0;
 
   li {
     display: block;
@@ -11,12 +11,27 @@
       background-color: lighten($color-blue, 42);
     }
   }
+
+  li:first-of-type {
+    background-color: lighten($color-yellow, 20);
+  }
+}
+
+.shows-none {
+  box-sizing: border-box;
+  color: $color-red;
+  font-size: 1.6em;
+  font-weight: 900;
+  padding: 1.5em;
+  pointer-events: none;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .show-btn {
   display: block;
   overflow: hidden;
-  padding: 2.3em 0.25em;
+  padding: 2.6em 0.25em;
   position: relative;
   text-align: center;
   text-decoration: none;
@@ -134,11 +149,15 @@
     li {
       width: 50%;
     }
+
+    .shows-none {
+      width: 100%
+    }
   }
 
   .show-btn {
     border-top: 0;
-    padding: 2.5em 0.5em;
+    padding: 2.9em 0.5em;
 
     &:after {
       top: 2.5em;
