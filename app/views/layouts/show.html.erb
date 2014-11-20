@@ -1,0 +1,28 @@
+<%= render 'layouts/common_head' %>
+<body>
+  <div class="<%if @show.sold_out %>show-sold-out<% end %>">
+    <a href="<%= show_path @show %>" class="show-btn">
+      <h3 class="show-city"><%= @show.city %></h3>
+
+      <time datetime="<%= @show.show_date %>" class="show-date">
+        <%= @show.show_date.strftime("%b %d %Y") %>
+      </time>
+
+      <h4 class="show-venue">
+        <%= @show.venue %>
+      </h4>
+
+      <%if @show.quick_info %>
+      <h5 class="show-info-excerpt"><%= @show.quick_info %></h5>
+      <% end %>
+
+      <h4 class="show-details-btn">
+        <%if @show.sold_out %>
+        <em class="sold-out-banner">Sold out</em>
+        <% end %>
+        Details
+      </h4>
+    </a>
+  </div>
+</body>
+</html>

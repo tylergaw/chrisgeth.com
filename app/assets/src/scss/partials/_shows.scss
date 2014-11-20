@@ -12,12 +12,13 @@
     }
   }
 
-  li:first-of-type {
+  li:first-of-type:not(.shows-none) {
     background-color: lighten($color-yellow, 20);
   }
 }
 
 .shows-none {
+  background-color: transparent;
   box-sizing: border-box;
   color: $color-red;
   font-size: 1.6em;
