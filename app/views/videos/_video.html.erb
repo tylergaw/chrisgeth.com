@@ -1,0 +1,13 @@
+<li class="video">
+  <%= link_to image_tag(video.image), video.url, class: "video-image" %>
+
+  <h3 class="video-title">
+    <a href="<%= video.url %>">
+      <%= video.title %>
+    </a>
+  </h3>
+
+  <p class="video-desc">
+    <%= video.description %>
+  </p>
+</li>

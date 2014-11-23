@@ -3,6 +3,7 @@
 node_modules
 /public/css
 /public/images
+/public/system
 /log/*.log
 scssReport.xml
 /.bundle
@@ -14,3 +15,4 @@ doc/
 .project
 .idea
 .secret
+.env
