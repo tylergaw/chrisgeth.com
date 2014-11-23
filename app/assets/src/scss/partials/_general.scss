@@ -42,6 +42,18 @@ a {
   padding: $gutter-padding;
 }
 
+%drop-cap {
+  color: $color-red;
+  display: block;
+  float: left;
+  font-family: georgia;
+  font-size: 290%;
+  font-weight: 900;
+  line-height: 1;
+  padding: 0 0.15em 0 0;
+  position: relative
+}
+
 .page-intro {
   font-size: 1.2em;
   font-weight: 400;
@@ -50,15 +62,7 @@ a {
   padding-top: 1.4em;
 
   &:first-letter {
-    color: $color-red;
-    display: block;
-    float: left;
-    font-family: georgia;
-    font-size: 290%;
-    font-weight: 900;
-    line-height: 1;
-    padding: 0 0.15em 0 0;
-    position: relative;
+    @extend %drop-cap;
   }
 
   @media screen and (min-width: 620px) {
