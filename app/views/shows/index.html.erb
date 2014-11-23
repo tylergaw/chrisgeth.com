@@ -1,5 +1,5 @@
 <% provide :body_class, "page-shows" %>
-<h1 class="page-title title-character title-willem">Panic Attacks Nightly</h1>
+<h1 class="page-title title-character <%= title_char_class %>">Panic Attacks Nightly</h1>
 <ul class="list-shows">
   <%= render(:partial => 'shows/show', :collection => @shows) || render(:partial => 'shows/no_shows') %>
 </ul>

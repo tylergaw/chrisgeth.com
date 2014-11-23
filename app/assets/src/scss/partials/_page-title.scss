@@ -21,13 +21,14 @@
   @extend %page-title-inverse;
 }
 
-@media screen and (min-width: 520px) {
+@media screen and (min-width: 530px) {
   .page-title {
     background-color: transparent;
     border-bottom: 2px solid lighten($color-grey, 70);
     color: $color-grey;
-    font-size: 3em;
+    font-size: 2.8em;
     padding-bottom: 0.6em;
+    text-indent: 0.5em;
     width: 99%;
   }
 
@@ -42,7 +43,8 @@
       left: 0;
       max-width: get-target-width(1.1);
       position: absolute;
-      top: -0.85em;
+      top: -0.32em;
+      // top: -0.85em;
       width: calc-percent(get-target-width(2), get-target-width(12));
     }
   }
@@ -53,9 +55,39 @@
     }
   }
 
-  .title-smithgate {
+  .title-andy {
     &:before {
-      background-image: url("../images/heading-smithgate.png");
+      background-image: url("../images/heading-andy.png");
+    }
+  }
+
+  .title-freddie {
+    &:before {
+      background-image: url("../images/heading-freddie.png");
+    }
+  }
+
+  .title-hills {
+    &:before {
+      background-image: url("../images/heading-hills.png");
+    }
+  }
+
+  .title-morrissey {
+    &:before {
+      background-image: url("../images/heading-morrissey.png");
+    }
+  }
+
+  .title-multiman {
+    &:before {
+      background-image: url("../images/heading-multiman.png");
+    }
+  }
+
+  .title-roddy {
+    &:before {
+      background-image: url("../images/heading-roddy.png");
     }
   }
 

@@ -6,7 +6,7 @@
   "devDependencies": {
     "autoprefixer-core": "^3.1.0",
     "colors": "^0.6.2",
-    "gulp": "^3.8.9",
+    "gulp": "^3.8.10",
     "gulp-cached": "^1.0.1",
     "gulp-plumber": "^0.6.5",
     "gulp-postcss": "^2.0.0",
