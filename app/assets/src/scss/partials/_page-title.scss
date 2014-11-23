@@ -44,7 +44,6 @@
       max-width: get-target-width(1.1);
       position: absolute;
       top: -0.32em;
-      // top: -0.85em;
       width: calc-percent(get-target-width(2), get-target-width(12));
     }
   }
@@ -94,8 +93,14 @@
   .title-rickman {
     &:before {
       background-image: url("../images/heading-rickman.png");
-      background-size: 100%;
-      max-width: get-target-width(1.2);
+    }
+  }
+}
+
+@media screen and (min-width: 630px) {
+  .title-character {
+    &:before {
+      top: -0.9em;
     }
   }
 }
@@ -108,9 +113,7 @@
   .title-character {
     &:before {
       height: get-target-width(2);
-      left: 0;
-      max-width: get-target-width(1.4);
-      top: -0.9em;
+      max-width: get-target-width(1.5);
       width: calc-percent(get-target-width(2), get-target-width(12));
     }
   }
