@@ -2,7 +2,7 @@ class ShowsController < ApplicationController
   layout :resolve_layout
 
   def index
-    @shows = Show.where("show_date >= ?", Date.today)
+    @shows = Show.where("show_date >= ?", Time.zone.now.to_date)
   end
 
   def show
