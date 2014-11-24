@@ -10,7 +10,8 @@ gem 'sdoc', '0.4.0', group: :doc
 gem 'twitter', '5.12.0'
 gem 'twitter-text', '1.10.0'
 gem 'youtube_it', '2.4.2'
-gem "paperclip", "4.2"
+gem 'paperclip', '4.2'
+gem 'aws-sdk', '1.59.0'
 
 group :development, :test do
   gem 'byebug', '3.4.0'
