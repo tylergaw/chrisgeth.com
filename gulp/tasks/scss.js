@@ -7,6 +7,7 @@ var gulp = require('gulp'),
   scsslint = require('gulp-scss-lint'),
   cache = require('gulp-cached'),
   colors = require('colors'),
+  del = require('del'),
   config = require('../config').scss;
 
 gulp.task('scss-lint', function () {
@@ -20,7 +21,11 @@ gulp.task('scss-lint', function () {
     }));
 });
 
-gulp.task('scss', ['scss-lint'], function () {
+gulp.task('css-clean', function () {
+  del([config.dest + '/**']);
+});
+
+gulp.task('scss', ['scss-lint', 'css-clean'], function () {
   return gulp.src(config.src)
     .pipe(plumber())
     .pipe(sass({
