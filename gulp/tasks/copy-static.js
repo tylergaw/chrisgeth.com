@@ -1,4 +1,5 @@
 var gulp = require("gulp"),
+  rev = require('gulp-rev'),
   config = require("../config").assets;
 
 gulp.task("copy-static", function () {
