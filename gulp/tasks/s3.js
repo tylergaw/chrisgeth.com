@@ -1,6 +1,6 @@
 'use strict';
 
-// Copies the contents of /dist to the bucket specified Amazon S3 bucket
+// Copies the contents of /public to the bucket specified Amazon S3 bucket
 
 var gulp = require('gulp'),
   util = require('util'),
