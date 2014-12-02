@@ -11,10 +11,6 @@
       background-color: lighten($color-blue, 42);
     }
   }
-
-  li:first-of-type:not(.shows-none) {
-    background-color: lighten($color-yellow, 20);
-  }
 }
 
 .shows-none {
