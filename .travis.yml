@@ -20,8 +20,4 @@ deploy:
       staging: staging-gethard
     on:
       repo: tylergaw/chrisgeth.com
-    skip_cleanup: true
-  - provider: s3
-    on:
-      branch: staging
-      condition: $S3_BUCKET = gethard-staging
+    skip_cleanup: true  
