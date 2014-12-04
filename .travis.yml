@@ -23,6 +23,8 @@ deploy:
       repo: tylergaw/chrisgeth.com
     skip_cleanup: true
   - provider: s3
+    on:
+      repo: tylergaw/chrisgeth.com
     bucket: gethard-staging
     skip_cleanup: true
     local-dir: public
