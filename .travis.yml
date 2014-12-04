@@ -17,7 +17,6 @@ before_install:
 script: gulp
 
 deploy:
-  matrix:
   - provider: heroku
     buildpack: ruby
     api_key:
@@ -29,8 +28,6 @@ deploy:
       repo: tylergaw/chrisgeth.com
     skip_cleanup: true
   - provider: s3
-    on:
-      repo: tylergaw/chrisgeth.com
     bucket: gethard-staging
     skip_cleanup: true
     local-dir: public
@@ -38,3 +35,5 @@ deploy:
       secure: Flu/dxSi/Vk8Ymi0WJHi76DA4hGwX0xOLFCLPL0Ew37nfUedRgqyA7a1Iit3tHk+tYmzleGjMEmJvgshW5XTm/ZiDeS1Ff4W7kMCRGBSn/g2ZGLOVjW6/ENNGGttUm6ym0aaCaVUE40ugjjM5VZrZdSS9T0aTX/6/gbf87H3ZA8=
     access_key_id:
       secure: KY2RzqHSoPBATgbRnNiPxVwsQOBqqZ09idUzBaK3RQ16buCmfPFiAzcMcB+q1Qh549DI0NtEC0uH5oO2RaLecDywy03W97Ty3XMuClkOLCKE2jc9GcHbeSXIfL58B9m/vieRdqISHVD/FHNx207egTHFWLgK48TJSsgm0mYiHQA=
+    on:
+      repo: tylergaw/chrisgeth.com
