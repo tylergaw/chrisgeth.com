@@ -12,6 +12,7 @@ gem 'twitter-text', '1.10.0'
 gem 'youtube_it', '2.4.2'
 gem 'paperclip', '4.2'
 gem 'aws-sdk', '1.59.0'
+gem 'tumblr_client', '0.8.5'
 
 group :development, :test do
   gem 'byebug', '3.4.0'
