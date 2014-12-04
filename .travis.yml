@@ -2,15 +2,16 @@ language: node_js
 node_js:
 - '0.10'
 before_install:
-  - sudo apt-get install -y python-software-properties
-  - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
-  - sudo apt-get update
-  - sudo apt-get install -y gcc-4.8 g++-4.8
-  - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 50
-  - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 50
-  - gem install scss-lint
+- sudo apt-get install -y python-software-properties
+- sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
+- sudo apt-get update
+- sudo apt-get install -y gcc-4.8 g++-4.8
+- sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 50
+- sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 50
+- gem install scss-lint
 script: gulp
 deploy:
+  matrix:
   - provider: heroku
     buildpack: ruby
     api_key:
@@ -20,4 +21,12 @@ deploy:
       staging: staging-gethard
     on:
       repo: tylergaw/chrisgeth.com
-    skip_cleanup: true  
+    skip_cleanup: true
+  - provider: s3
+    bucket: gethard-staging
+    skip_cleanup: true
+    local-dir: public
+    secret_access_key:
+      secure: Flu/dxSi/Vk8Ymi0WJHi76DA4hGwX0xOLFCLPL0Ew37nfUedRgqyA7a1Iit3tHk+tYmzleGjMEmJvgshW5XTm/ZiDeS1Ff4W7kMCRGBSn/g2ZGLOVjW6/ENNGGttUm6ym0aaCaVUE40ugjjM5VZrZdSS9T0aTX/6/gbf87H3ZA8=
+    access_key_id:
+      secure: KY2RzqHSoPBATgbRnNiPxVwsQOBqqZ09idUzBaK3RQ16buCmfPFiAzcMcB+q1Qh549DI0NtEC0uH5oO2RaLecDywy03W97Ty3XMuClkOLCKE2jc9GcHbeSXIfL58B9m/vieRdqISHVD/FHNx207egTHFWLgK48TJSsgm0mYiHQA=
