@@ -6,7 +6,7 @@
 }
 
 .post {
-  border-bottom: 1px solid lighten($color-grey, 20);
+  border-bottom: 2px solid lighten($color-grey, 40);
   margin-bottom: 4em;
   padding-bottom: 2em;
 
@@ -130,6 +130,24 @@
   }
 }
 
+.post__question {
+  background-color: lighten($color-blue, 42);
+  border-radius: 3px;
+  border: 1px solid lighten($color-blue, 35);
+  padding: 0.6em 0.8em 0 0.8em;
+  font-size: 90%;
+}
+
+.asking__name {
+  color: $color-grey;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a.asking__name:hover {
+  color: $color-blue;
+}
+
 .post__image {
   max-width: 100%;
 }
@@ -147,7 +165,7 @@
 
   .post--video .post__body {
     iframe {
-      height: 375px;
+      height: 385px;
     }
   }
 }
@@ -156,36 +174,4 @@
   .post__body {
     font-size: 1.2em;
   }
-}
-
-.post--text {
-
-}
-
-.post--photo {
-
-}
-
-.post--audio {
-
-}
-
-.post--quote {
-
-}
-
-.post--link {
-
-}
-
-.post--video {
-
-}
-
-.post--chat {
-
-}
-
-.post--answer {
-
 }

@@ -29,6 +29,26 @@
   </div>
   <% end %>
 
+  <% if post["type"] == "answer" %>
+  <div class="post__body">
+
+    <div class="post__question">
+      <% if post["asking_url"] %>
+      <a href="<%= post["asking_url"] %>" class="asking__name"><%= post["asking_name"] %></a>
+      <% else %>
+      <b class="asking__name"><%= post["asking_name"] %> </b>
+      <% end %>
+      asked:
+
+      <p class="question__content">
+        <%= post["question"] %>
+      </p>
+    </div>
+
+    <%= post["answer"].html_safe %>
+  </div>
+  <% end %>
+
   <% if post["type"] == "quote" %>
   <div class="post__body">
     <blockquote class="post__quote">
