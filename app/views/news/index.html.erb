@@ -1,7 +1,7 @@
 <% provide :body_class, "page-news" %>
 <h1 class="page-title title-character <%= title_char_class %>">What’s Happening?</h1>
 
-<div class="page-content">
+<div class="page--content">
   <ul class="list--posts">
     <%= render(:partial => 'news/post', :collection => @posts) || render(:partial => 'news/no_news') %>
   </ul>
@@ -9,11 +9,11 @@
   <% if @prev_page or @next_page %>
   <div class="pagination">
     <% if @prev_page %>
-    <%= link_to "Prev", news_path(page: @prev_page) %>
+    <%= link_to "Prev", news_path(page: @prev_page), :class => "button" %>
     <% end %>
 
     <% if @next_page %>
-    <%= link_to "Next", news_path(page: @next_page) %>
+    <%= link_to "Next", news_path(page: @next_page), :class => "button" %>
     <% end %>
   </div>
   <% end %>
