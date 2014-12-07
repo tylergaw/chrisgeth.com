@@ -1,0 +1,29 @@
+.page--show {
+  background: #f7f400 linear-gradient(#df00b2 0%, #f7f400 30%, #f7f400 81%, #1db200 100%) no-repeat;
+  background-size: 100%;
+}
+
+.show-poster {
+  color: $color-grey;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.show-poster__callout {
+  font-size: 5vw;
+}
+
+.show-poster__headline {
+  font-size: 2em;
+  margin: 0;
+}
+
+.show-poster__byline {
+  @extend %roboto-cond;
+  background-color: $color-grey;
+  color: #f7f400;
+  display: inline-block;
+  font-weight: 900;
+  margin: 0;
+  padding: 0 0.3em;
+}
