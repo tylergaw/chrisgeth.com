@@ -1,8 +1,10 @@
-<% provide :body_class, "page-fans" %>
+<% provide :body_class, "page--fans" %>
 <h1 class="page-title title-character <%= title_char_class %>">I Love All You Weirdos</h1>
 
 <div class="page--content">
-  <p class="page-intro">
+  <%= image_tag("the-fans.jpg", class: "fans__images", alt: "Pictures of Geth with a bunch of excellent humans.") %>
+
+  <p class="page__intro">
     I am so flattered and honored that sometimes people reach out to me to let me
     know they’re enjoying what I put out there and that they’re rooting me on.
     Sometimes this comes after stand up shows, a lot of emails come in about <%= link_to "#TCGS", "http://thechrisgethardshow.com" %>
@@ -11,11 +13,28 @@
     I've gotten that really mean the world to me. All of these are real.
   </p>
 
-  <ul class="fans-quotes">
+  <ul class="fans__quotes">
     <li>
       <blockquote>
         <p>
           Sorry I read your book at a library rather than bought it.
+        </p>
+      </blockquote>
+    </li>
+    <li>
+      <blockquote>
+        <p>
+          I really don't know if I'm going to be ok.
+        </p>
+      </blockquote>
+    </li>
+    <li class="fan__quote--full">
+      <blockquote>
+        <p>
+          I really want to thank you sincerely for making something that made me
+          feel alive even when I was dead on the inside. Oh shit, that sounded weird.
+          All I meant was that I'm kinda sad. I'm not dead on the inside. This
+          e-mail was a mess.
         </p>
       </blockquote>
     </li>
@@ -30,17 +49,8 @@
     <li>
       <blockquote>
         <p>
-          I really want to thank you sincerely for making something that made me
-          feel alive even when I was dead on the inside. Oh shit, that sounded weird.
-          All I meant was that I'm kinda sad. I'm not dead on the inside. This
-          e-mail was a mess.
-        </p>
-      </blockquote>
-    </li>
-    <li>
-      <blockquote>
-        <p>
-          I feel so fucking lost.
+          In honor of your birth, please accept the remaining balance on my J. Crew
+          gift card that I've had for at least 5 years (but which I confirmed is still valid).
         </p>
       </blockquote>
     </li>
@@ -54,15 +64,7 @@
     <li>
       <blockquote>
         <p>
-          In honor of your birth, please accept the remaining balance on my J. Crew
-          gift card that I've had for at least 5 years (but which I confirmed is still valid).
-        </p>
-      </blockquote>
-    </li>
-    <li>
-      <blockquote>
-        <p>
-          I really don't know if I'm going to be ok.
+          I feel so fucking lost.
         </p>
       </blockquote>
     </li>
