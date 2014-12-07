@@ -1,5 +1,5 @@
 <li class="<%if show.sold_out %>show-sold-out<% end %>">
-  <a href="<%= show_path show %>" class="show-btn">
+  <a href="<%= show_path show.full_path %>" class="show-btn">
     <h3 class="show-city"><%= show.city %></h3>
 
     <time datetime="<%= show.show_date %>" class="show-date">
