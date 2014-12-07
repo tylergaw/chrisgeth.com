@@ -157,6 +157,33 @@ a.asking__name:hover {
   width: 100%;
 }
 
+// NOTE: This is a hacking way of doing this.
+.photo-count-2,
+.photo-count-3,
+.photo-count-4,
+.photo-count-5,
+.photo-count-6,
+.photo-count-7,
+.photo-count-8 {
+  .post__image {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .photo-count-2,
+  .photo-count-3,
+  .photo-count-4,
+  .photo-count-5,
+  .photo-count-6,
+  .photo-count-7,
+  .photo-count-8 {
+    .post__image {
+      width: 48%;
+    }
+  }
+}
+
 .pagination {
   font-size: 1.2em;
   margin-bottom: 3em;
