@@ -4,10 +4,18 @@ class NewsController < ApplicationController
   def index
     page = (params[:page]) ? params[:page].to_i : 1
     per_page = 10
-    offset = (per_page * page) - 1
+    offset = (per_page * (page - 1))
+    post_type = (params[:type]) or nil
+    options = {
+      'offset' => offset,
+      'limit' => per_page
+    }
 
-    res = tb_client.posts('thechrisgethardshow.tumblr.com', :offset => offset,
-      :limit => per_page)
+    if post_type
+      options['type'] = post_type
+    end
+
+    res = tb_client.posts('thechrisgethardshow.tumblr.com', options)
 
     total = res['total_posts']
     total_pages = (total.to_f / per_page).floor

@@ -1,7 +1,92 @@
-<li class="post post-<%= post["type"] %>">
-  <%= post["type"] %>
-  <%= post["id"] %>
-  <%= post["date"] %>
+<li class="post post--<%= post["type"] %>" id="post-<%= post["id"] %>">
+  <a href="<%= post["post_url"] %>">
+    <time class="post__date" datetime="<%= post["date"] %>">
+      <%= post["date"].to_time.strftime("%b %d %Y") %>
+    </time>
+  </a>
 
-  <code><%= post %></code>
+  <% if post["title"] %>
+  <h3 class="post__title">
+    <a href="<%= post["post_url"] %>">
+      <%= post["title"] %>
+    </a>
+  </h3>
+  <% end %>
+
+  <% if post["body"] && post["type"] != "chat" %>
+  <div class="post__body">
+    <%= post["body"].html_safe %>
+  </div>
+  <% end %>
+
+  <% if post["type"] == "chat" %>
+  <div class="post__body post__body--chat">
+    <% post["dialogue"].each do |line| %>
+    <p>
+      <b><%= line["label"] %></b> <%= line["phrase"].html_safe %>
+    </p>
+    <% end %>
+  </div>
+  <% end %>
+
+  <% if post["type"] == "quote" %>
+  <div class="post__body">
+    <blockquote class="post__quote">
+      <div class="quote__text">
+        <%= post["text"].html_safe %>
+      </div>
+      <footer class="quote__source">
+        <%= post["source"].html_safe %>
+      </footer>
+    </blockquote>
+  </div>
+  <% end %>
+
+  <% if post["type"] == "photo" %>
+    <div class="post__body">
+
+      <% post["photos"].each do |photo| %>
+        <%= image_tag(photo["alt_sizes"][0]["url"], class: "post__image") %>
+        <%= photo["caption"] %>
+      <% end %>
+
+      <% if post["caption"] %>
+      <%= post["caption"].html_safe %>
+      <% end %>
+    </div>
+  <% end %>
+
+  <% if post["type"] == "video" %>
+    <div class="post__body">
+      <% video_player = post["player"][post["player"].length - 1]["embed_code"] %>
+
+      <% if video_player %>
+      <%= video_player.html_safe %>
+      <% else %>
+      <a href="<%= post["post_url"] %>"><%= post["post_url"] %></a>
+      <% end %>
+
+      <% if post["caption"] %>
+      <%= post["caption"].html_safe %>
+      <% end %>
+    </div>
+  <% end %>
+
+  <% if post["type"] == "audio" %>
+  <div class="post__body">
+    <%= post["player"].html_safe %>
+
+    <% if post["caption"] %>
+    <%= post["caption"].html_safe %>
+    <% end %>
+  </div>
+  <% end %>
+
+  <% if post["type"] == "link" %>
+    <% if post["description"] %>
+    <div class="post__body">
+    <%= post["description"].html_safe %>
+    </div>
+    <% end %>
+  <% end %>
 </li>
