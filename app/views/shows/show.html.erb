@@ -1,0 +1,22 @@
+<div class="show-poster__image"></div>
+
+<h3 class="show__city"><%= @show.city %></h3>
+
+<time datetime="<%= @show.show_date %>" class="show__date">
+  <%= @show.show_date.strftime("%b %d %Y") %>
+</time>
+
+<h4 class="show__venue">
+  <%= @show.venue %>
+</h4>
+
+<%if @show.quick_info.present? %>
+<h5 class="show__info-excerpt"><%= @show.quick_info %></h5>
+<% end %>
+
+<a href="<%= @show.info_url %>" class="button button--show-details">
+  <%if @show.sold_out %>
+  <em class="show__sold-out-banner">Sold out</em>
+  <% end %>
+  More Info / Tickets
+</a>

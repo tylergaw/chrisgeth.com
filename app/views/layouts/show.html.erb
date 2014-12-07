@@ -1,31 +1,16 @@
+<% provide :html_class, "page--show" %>
 <%= render 'layouts/common_head' %>
-<body class="page--show">
+<body>
   <div class="show-poster">
     <header class="show-poster__callout">
       <h3 class="show-poster__headline">Live</h3>
       <h4 class="show-poster__byline">In concert</h4>
     </header>
 
-    <h3 class="show__city"><%= @show.city %></h3>
+    <h1 class="show-poster__name">Chris Gethard</h1>
 
-    <time datetime="<%= @show.show_date %>" class="show__date">
-      <%= @show.show_date.strftime("%b %d %Y") %>
-    </time>
+    <%= yield %>
 
-    <h4 class="show__venue">
-      <%= @show.venue %>
-    </h4>
-
-    <%if @show.quick_info %>
-    <h5 class="show__info-excerpt"><%= @show.quick_info %></h5>
-    <% end %>
-
-    <h4 class="button button--show-details">
-      <%if @show.sold_out %>
-      <em class="show__sold-out-banner">Sold out</em>
-      <% end %>
-      Tickets
-    </h4>
   </div>
 </body>
 </html>

@@ -10,7 +10,7 @@
       <%= show.venue %>
     </h4>
 
-    <%if show.quick_info %>
+    <%if show.quick_info.present? %>
     <h5 class="show-info-excerpt"><%= show.quick_info %></h5>
     <% end %>
 

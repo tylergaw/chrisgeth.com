@@ -1,29 +1,119 @@
-.page--show {
-  background: #f7f400 linear-gradient(#df00b2 0%, #f7f400 30%, #f7f400 81%, #1db200 100%) no-repeat;
-  background-size: 100%;
+$color-s-pink: desaturate(#df00b2, 15);
+$color-s-yellow: desaturate(#f7f400, 10);
+$color-s-green: desaturate(#1db200, 15);
+
+.page--show,
+.page--show body {
+  background: $color-s-green linear-gradient($color-s-pink 0%,
+    $color-s-yellow 30%, $color-s-yellow 81%, $color-s-green 100%) no-repeat;
+  background-size: 100% 1200px;
 }
 
 .show-poster {
   color: $color-grey;
+  font-size: 3vw;
+  padding-bottom: 2em;
   text-align: center;
   text-transform: uppercase;
 }
 
 .show-poster__callout {
-  font-size: 5vw;
+  font-size: 110%;
 }
 
 .show-poster__headline {
   font-size: 2em;
+  font-weight: 900;
+  line-height: 1;
   margin: 0;
 }
 
 .show-poster__byline {
   @extend %roboto-cond;
   background-color: $color-grey;
-  color: #f7f400;
+  color: mix($color-s-pink, $color-s-yellow, 70%);
   display: inline-block;
-  font-weight: 900;
+  font-weight: 700;
   margin: 0;
-  padding: 0 0.3em;
+  padding: 0 0.2em;
+}
+
+.show-poster__name {
+  font-size: 3.6em;
+  font-weight: 900;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.show-poster__image {
+  background: $color-s-yellow url("../images/show-poster-001.jpg") no-repeat center top;
+  background-blend-mode: multiply;
+  background-size: 100%;
+  display: block;
+  filter: brightness(1.1);
+  margin: 0.2em auto 0 auto;
+  opacity: 0.7;
+  padding-top: 35%;
+  width: 55%;
+}
+
+.show__city {
+  font-size: 2.4em;
+  font-weight: 900;
+  line-height: 1;
+  margin: 0.3em 0 0 0;
+  padding: 0;
+}
+
+.show__date {
+  display: block;
+  font-size: 1.2em;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-top: 0.1em;
+  padding: 0;
+
+  &:before,
+  &:after {
+    content: "  \2605  \2605  \2605  ";
+    font-size: 85%;
+  }
+}
+
+.show__venue {
+  font-family: georgia, times, serif;
+  font-size: 2.3em;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  margin: 0.4em 0 0.5em 0;
+  padding: 0 0.5em;
+}
+
+.show__info-excerpt {
+  border-color: $color-grey;
+  border-width: 10px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  font-size: 1.2em;
+  font-weight: 900;
+  line-height: 1.1;
+  margin: 0.8em auto 1em auto;
+  padding: 0.4em 0;
+  width: 45%;
+}
+
+.button--show-details {
+  background-color: $color-grey;
+  color: $color-off-white;
+  display: inline-block;
+  font-size: 1.1em;
+  font-weight: 900;
+  text-transform: none;
+
+  &:hover,
+  &:focus {
+    background-color: $color-s-yellow;
+    color: $color-grey;
+  }
 }
