@@ -49,15 +49,35 @@ $color-s-green: desaturate(#1db200, 15);
 }
 
 .show-poster__image {
-  background: $color-s-yellow url("../images/show-poster-002.jpg") no-repeat center top;
+  background: $color-s-yellow url("../images/show-poster-000.jpg") no-repeat center top;
   background-blend-mode: multiply;
-  background-size: 100%;
+  background-size: 105%;
   display: block;
   filter: brightness(1.1);
   margin: 0.2em auto 0 auto;
   opacity: 0.7;
   padding-top: 50%;
   width: 80%;
+}
+
+.show-poster__image--001  {
+  background-image: url("../images/show-poster-001.jpg");
+}
+
+.show-poster__image--002  {
+  background-image: url("../images/show-poster-002.jpg");
+}
+
+.show-poster__image--003  {
+  background-image: url("../images/show-poster-003.jpg");
+}
+
+.show-poster__image--004  {
+  background-image: url("../images/show-poster-004.jpg");
+}
+
+.show-poster__image--005  {
+  background-image: url("../images/show-poster-005.jpg");
 }
 
 .show__city {
