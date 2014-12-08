@@ -1,6 +1,6 @@
 <% provide :body_class, "page--home" %>
 
-<div class="page--content">
+<div class="page--content page--content--home">
   <div class="home__section home__section--news">
     <h2 class="heading--section">Latest News</h2>
     <ul class="list--posts list--posts--home">
@@ -12,9 +12,9 @@
   </div>
 
   <div class="home__section home__section-shows">
-    <h2 class="heading--section">Next Show</h2>
+    <h2 class="heading--section">Upcoming Shows</h2>
     <ul class="list--shows list--shows--home">
-      <%= render(:partial => 'shows/show', locals: {show: @show}) || render(:partial => 'shows/no_shows') %>
+      <%= render(:partial => 'shows/show', :collection => @shows) || render(:partial => 'shows/no_shows') %>
     </ul>
     <div class="home__section__footer">
       <%= link_to "All Shows", shows_path, class: "btn--text" %>

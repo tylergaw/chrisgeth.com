@@ -64,6 +64,7 @@
 }
 
 .list--shows--home {
+  font-size: 90%;
   padding-bottom: 0;
 
   .show__btn {
@@ -174,10 +175,23 @@
       top: 2.5em;
     }
   }
+
+  .list--shows--home {
+    display: block;
+    padding-top: 0;
+
+    li {
+      width: auto;
+    }
+  }
 }
 
 @media screen and (min-width: 820px) {
   .list--shows li {
     width: 33.33%;
+  }
+
+  .list--shows--home li {
+    width: auto;
   }
 }

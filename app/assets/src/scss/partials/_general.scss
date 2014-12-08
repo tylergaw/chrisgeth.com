@@ -79,6 +79,15 @@ a {
   font-size: 1.6em;
   margin: 0;
   padding-bottom: 0.5em;
+  position: relative;
+
+  &:before {
+    background-color: $color-grey;
+    content: "";
+    display: block;
+    height: 0.25em;
+    width: 1.5em;
+  }
 }
 
 .button {

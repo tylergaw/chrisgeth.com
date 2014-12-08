@@ -54,6 +54,11 @@
   }
 }
 
+.page--content--home {
+  clear: both;
+  overflow: hidden;
+}
+
 .home__section {
   margin-bottom: 3em;
   padding-top: 0.5em;
@@ -61,4 +66,16 @@
 
 .home__section__footer {
   text-align: right;
+}
+
+@media screen and (min-width: 640px) {
+  .home__section--news {
+    float: left;
+    width: calc-percent(get-target-width(7), get-target-width(12));
+  }
+
+  .home__section-shows {
+    float: right;
+    width: calc-percent(get-target-width(4), get-target-width(12));
+  }
 }
