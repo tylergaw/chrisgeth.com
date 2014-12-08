@@ -10,7 +10,13 @@
     <h1 class="show-poster__name">Chris Gethard</h1>
 
     <%= yield %>
-
   </div>
+  <nav role="navigation" class="show-nav">
+    <%= link_to "News", news_path %>
+    <%= link_to "Shows", shows_path %>
+    <%= link_to "Articles", articles_path %>
+    <%= link_to "Videos", videos_path %>
+    <%= link_to "Merch", merch_path %>
+  </nav>
 </body>
 </html>

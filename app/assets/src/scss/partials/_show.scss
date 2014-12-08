@@ -46,14 +46,14 @@ $color-s-green: desaturate(#1db200, 15);
 }
 
 .show-poster__image {
-  background: $color-s-yellow url("../images/show-poster-001.jpg") no-repeat center top;
+  background: $color-s-yellow url("../images/show-poster-003.jpg") no-repeat center top;
   background-blend-mode: multiply;
   background-size: 100%;
   display: block;
   filter: brightness(1.1);
   margin: 0.2em auto 0 auto;
   opacity: 0.7;
-  padding-top: 35%;
+  padding-top: 30%;
   width: 55%;
 }
 
@@ -105,15 +105,45 @@ $color-s-green: desaturate(#1db200, 15);
 
 .button--show-details {
   background-color: $color-grey;
-  color: $color-off-white;
+  color: $color-s-green;
   display: inline-block;
-  font-size: 1.1em;
+  font-size: 1em;
   font-weight: 900;
   text-transform: none;
+
+  &:after {
+    content: "\25B6";
+    display: inline-block;
+    font-size: 60%;
+    line-height: 2.2;
+    padding-left: 0.2em;
+    padding-top: 0.1em;
+    vertical-align: top;
+  }
 
   &:hover,
   &:focus {
     background-color: $color-s-yellow;
     color: $color-grey;
+  }
+}
+
+.show-nav {
+  font-size: 1.2em;
+  padding: 0 0.5em 2em 0.5em;
+  text-align: center;
+
+  a {
+    color: $color-grey;
+    display: inline-block;
+    font-weight: 900;
+    padding: 0.2em;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus {
+      background-color: lighten($color-s-green, 10);
+    }
   }
 }
