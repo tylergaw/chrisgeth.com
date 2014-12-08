@@ -15,7 +15,7 @@ class NewsController < ApplicationController
       options['type'] = post_type
     end
 
-    res = tb_client.posts('thechrisgethardshow.tumblr.com', options)
+    res = tb_client.posts(tb_url, options)
 
     total = res['total_posts']
     total_pages = (total.to_f / per_page).floor

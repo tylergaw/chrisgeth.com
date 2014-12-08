@@ -1,4 +1,8 @@
 module TumblrHelper
+  def tb_url
+    'thechrisgethardshow.tumblr.com'
+  end
+
   def tb_client
     tb_client = Tumblr::Client.new :consumer_key => ENV['TUMBLR_KEY']
   end
