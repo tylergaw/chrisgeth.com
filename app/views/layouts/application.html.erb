@@ -43,7 +43,7 @@
     </div>
 
     <div class="tweet">
-      <h3 class="tweet-title"><a href="https://twitter.com/chrisgethard">@ChrisGethard</a></h3>
+      <h3 class="tweet-title"><a href="https://twitter.com/chrisgethard">@ChrisGethard on Twitter</a></h3>
       <a class="tweet-avatar" href="<%= @tweet.user.url %>">
         <img src="<%= @tweet.user.profile_image_url %>" alt="Geth Avatar">
       </a>
@@ -59,7 +59,8 @@
       </div>
     </div>
 
-    <!-- <div class="tinyletter">
+    <% if false %>
+    <div class="tinyletter">
       <form action="https://tinyletter.com/tylergaw" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/tylergaw', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
         <div>
           <label for="tlemail">Email</label>
@@ -68,7 +69,8 @@
         <input type="hidden" value="1" name="embed">
         <input type="submit" value="Subscribe">
       </form>
-    </div> -->
+    </div>
+    <% end %>
   </div>
 
 </body>
