@@ -43,6 +43,33 @@
   line-height: 1.6;
 }
 
+.merch-item__quote {
+  border-left: 6px solid $color-red;
+  color: $color-red;
+  margin: 0;
+  padding-left: 0.8em;
+  
+  p {
+    font-weight: 700;
+  }
+
+  footer {
+    color: $color-grey;
+    font-size: 90%;
+  }
+
+  a {
+    color: $color-grey;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: $color-blue;
+      text-decoration: underline;
+    }
+  }
+}
+
 @media screen and (min-width: 550px) {
   .merch-item {
     text-align: left;
