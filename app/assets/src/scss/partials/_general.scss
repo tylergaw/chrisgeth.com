@@ -74,6 +74,13 @@ a {
   }
 }
 
+.heading--section {
+  @extend %page-title-text;
+  font-size: 1.6em;
+  margin: 0;
+  padding-bottom: 0.5em;
+}
+
 .button {
   background-color: $color-blue;
   border-radius: 3px;
@@ -88,4 +95,10 @@ a {
   &:focus {
     background-color: $color-red;
   }
+}
+
+.btn--text {
+  display: inline-block;
+  font-weight: 700;
+  padding: 0.3em 0.6em;
 }

@@ -63,6 +63,18 @@
   }
 }
 
+.list--shows--home {
+  padding-bottom: 0;
+
+  .show__btn {
+    padding: 2em 0.25em;
+
+    &:after {
+      display: none;
+    }
+  }
+}
+
 .sold-out-banner {
   @extend %roboto-cond;
   background-color: $color-yellow;

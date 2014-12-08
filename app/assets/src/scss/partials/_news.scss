@@ -5,6 +5,13 @@
   padding: 0;
 }
 
+.list--posts--home {
+  .post:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
 .post {
   border-bottom: 2px solid lighten($color-grey, 40);
   margin-bottom: 4em;
