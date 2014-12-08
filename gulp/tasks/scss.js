@@ -30,7 +30,7 @@ gulp.task('scss', ['scss-lint', 'css-clean'], function () {
     .pipe(plumber())
     .pipe(sass({
       sourceMap: false,
-      outputStyle: 'nested'
+      outputStyle: 'compressed'
     }))
     .pipe(postcss([autoprefixer]))
     .pipe(rev())
