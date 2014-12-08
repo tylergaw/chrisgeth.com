@@ -80,93 +80,95 @@ $color-s-green: desaturate(#1db200, 15);
   background-image: url("../images/show-poster-005.jpg");
 }
 
-.show__city {
-  font-size: 2.4em;
-  font-weight: 900;
-  line-height: 1;
-  margin: 0.3em 0 0 0;
-  padding: 0 0.4em;
-}
-
-.show__date {
-  display: block;
-  font-size: 1.2em;
-  font-weight: 900;
-  line-height: 1.1;
-  margin-top: 0.1em;
-  padding: 0;
-
-  &:before,
-  &:after {
-    content: "  \2605  \2605  \2605  ";
-    font-size: 85%;
+.show-poster {
+  .show__city {
+    font-size: 2.4em;
+    font-weight: 900;
+    line-height: 1;
+    margin: 0.3em 0 0 0;
+    padding: 0 0.4em;
   }
-}
 
-.show__venue {
-  font-family: georgia, times, serif;
-  font-size: 1.8em;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  line-height: 1;
-  margin: 0.8em 0 0.5em 0;
-  padding: 0 0.5em;
-}
+  .show__date {
+    display: block;
+    font-size: 1.2em;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-top: 0.1em;
+    padding: 0;
 
-.show__info-excerpt {
-  border-color: $color-grey;
-  border-width: 10px;
-  border-top-style: solid;
-  border-bottom-style: solid;
-  font-size: 1.2em;
-  font-weight: 900;
-  line-height: 1.1;
-  margin: 1.2em auto 1.6em auto;
-  padding: 0.4em 0;
-  width: 80%;
-}
+    &:before,
+    &:after {
+      content: "  \2605  \2605  \2605  ";
+      font-size: 85%;
+    }
+  }
 
-.button--show-details {
-  background-color: $color-grey;
-  color: $color-s-green;
-  display: inline-block;
-  font-size: 1.4em;
-  font-weight: 900;
-  position: relative;
-  text-transform: none;
+  .show__venue {
+    font-family: georgia, times, serif;
+    font-size: 1.8em;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    line-height: 1;
+    margin: 0.8em 0 0.5em 0;
+    padding: 0 0.5em;
+  }
 
-  &:after {
-    content: "\25B6";
+  .show__info-excerpt {
+    border-color: $color-grey;
+    border-width: 10px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    font-size: 1.2em;
+    font-weight: 900;
+    line-height: 1.1;
+    margin: 1.2em auto 1.6em auto;
+    padding: 0.4em 0;
+    width: 80%;
+  }
+
+  .button--show-details {
+    background-color: $color-grey;
+    color: $color-s-green;
+    display: inline-block;
+    font-size: 1.4em;
+    font-weight: 900;
+    position: relative;
+    text-transform: none;
+
+    &:after {
+      content: "\25B6";
+      display: inline-block;
+      font-size: 60%;
+      line-height: 2.2;
+      padding-left: 0.2em;
+      padding-top: 0.1em;
+      vertical-align: top;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $color-s-yellow;
+      color: $color-grey;
+    }
+  }
+
+  .show__sold-out-banner {
+    @extend %roboto-cond;
+    background-color: $color-s-yellow;
+    box-sizing: border-box;
+    color: #000;
     display: inline-block;
     font-size: 60%;
-    line-height: 2.2;
-    padding-left: 0.2em;
-    padding-top: 0.1em;
-    vertical-align: top;
+    font-weight: 700;
+    left: -2.5%;
+    padding: 0 0.2em;
+    position: absolute;
+    top: 1em;
+    transform: rotate(-5deg);
+    width: 105%;
+    z-index: 100;
   }
-
-  &:hover,
-  &:focus {
-    background-color: $color-s-yellow;
-    color: $color-grey;
-  }
-}
-
-.show__sold-out-banner {
-  @extend %roboto-cond;
-  background-color: $color-s-yellow;
-  box-sizing: border-box;
-  color: #000;
-  display: inline-block;
-  font-size: 60%;
-  font-weight: 700;
-  left: -2.5%;
-  padding: 0 0.2em;
-  position: absolute;
-  top: 1em;
-  transform: rotate(-5deg);
-  width: 105%;
-  z-index: 100;
 }
 
 @media screen and (min-width: 481px) {
@@ -211,16 +213,18 @@ $color-s-green: desaturate(#1db200, 15);
     color: mix($color-s-pink, $color-s-yellow, 70%);
   }
 
-  .show__venue {
-    font-size: 2.3em;
-  }
+  .show-poster {
+    .show__venue {
+      font-size: 2.3em;
+    }
 
-  .show__info-excerpt {
-    width: 60%;
-  }
+    .show__info-excerpt {
+      width: 60%;
+    }
 
-  .button--show-details {
-    font-size: 1.1em;
+    .button--show-details {
+      font-size: 1.1em;
+    }
   }
 }
 
@@ -255,12 +259,14 @@ $color-s-green: desaturate(#1db200, 15);
     width: 65%;
   }
 
-  .show__city {
-    font-size: 2.1em;
-  }
+  .show-poster {
+    .show__city {
+      font-size: 2.1em;
+    }
 
-  .show__venue {
-    font-size: 1.8em;
+    .show__venue {
+      font-size: 1.8em;
+    }
   }
 }
 

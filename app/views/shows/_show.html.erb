@@ -1,20 +1,20 @@
-<li class="<%if show.sold_out %>show-sold-out<% end %>">
-  <a href="<%= show_path show.full_path %>" class="show-btn">
-    <h3 class="show-city"><%= show.city %></h3>
+<li>
+  <a href="<%= show_path show.full_path %>" class="show__btn">
+    <h3 class="show__city"><%= show.city %></h3>
 
-    <time datetime="<%= show.show_date %>" class="show-date">
+    <time datetime="<%= show.show_date %>" class="show__date">
       <%= show.show_date.strftime("%b %d %Y") %>
     </time>
 
-    <h4 class="show-venue">
+    <h4 class="show__venue">
       <%= show.venue %>
     </h4>
 
     <%if show.quick_info.present? %>
-    <h5 class="show-info-excerpt"><%= show.quick_info %></h5>
+    <h5 class="show__info-excerpt"><%= show.quick_info %></h5>
     <% end %>
 
-    <h4 class="show-details-btn">
+    <h4 class="show__btn--details">
       <%if show.sold_out %>
       <em class="sold-out-banner">Sold out</em>
       <% end %>

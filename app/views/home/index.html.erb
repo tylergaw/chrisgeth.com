@@ -1,12 +1,13 @@
-<% provide :body_class, "page-home" %>
+<% provide :body_class, "page--home" %>
 
 <h2>Latest News</h2>
-<ul class="list--posts">
+<ul class="list--posts list--posts--home">
   <%= render(:partial => 'news/post', :collection => @posts) || render(:partial => 'news/no_news') %>
 </ul>
+<%= link_to "All News", shows_path %>
 
 <h2>Next Show</h2>
-<ul class="list-shows">
+<ul class="list--shows list--shows--home">
   <%= render(:partial => 'shows/show', locals: {show: @show}) || render(:partial => 'shows/no_shows') %>
 </ul>
-<%= link_to "All Shows", shows_path, class: "button" %>
+<%= link_to "All Shows", shows_path %>

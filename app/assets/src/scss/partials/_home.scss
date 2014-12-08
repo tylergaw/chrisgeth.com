@@ -1,5 +1,5 @@
-.page-home {
-  .container-content {
+.page--home {
+  .container--content {
     background: $color-off-white url("../images/home-posse.jpg") no-repeat center -1em;
     background-size: 240%;
   }
@@ -27,7 +27,7 @@
   }
 
   @media screen and (min-width: 430px) {
-    .container-content {
+    .container--content {
       background-size: 103%;
     }
 
@@ -48,7 +48,7 @@
   }
 
   @media screen and (min-width: 1800px) {
-    .container-content {
+    .container--content {
       background-size: 1840px;
     }
   }

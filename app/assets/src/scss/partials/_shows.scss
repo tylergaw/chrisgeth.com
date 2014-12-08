@@ -1,4 +1,4 @@
-.list-shows {
+.list--shows {
   list-style: none outside;
   margin: 0;
   overflow: hidden;
@@ -25,7 +25,7 @@
   text-transform: uppercase;
 }
 
-.show-btn {
+.show__btn {
   display: block;
   overflow: hidden;
   padding: 2.6em 0.25em;
@@ -49,12 +49,12 @@
   &:focus {
     background-color: lighten($color-blue, 42);
 
-    .show-details-btn {
+    .show__btn--details {
       background-color: $color-red;
       color: #fff;
     }
 
-    .show-date {
+    .show__date {
       &:before,
       &:after {
         color: $color-red;
@@ -80,7 +80,7 @@
   z-index: 100;
 }
 
-.show-city {
+.show__city {
   color: $color-red;
   font-size: 1.8em;
   font-weight: 900;
@@ -88,7 +88,7 @@
   margin: 0;
 }
 
-.show-date {
+.show__date {
   display: block;
   font-size: 1.2em;
   font-weight: 700;
@@ -102,7 +102,7 @@
   }
 }
 
-.show-venue {
+.show__venue {
   font-family: georgia, times, serif;
   font-size: 1.6em;
   font-weight: 600;
@@ -110,13 +110,13 @@
   margin: 0;
 }
 
-.show-info-excerpt {
+.show__info-excerpt {
   font-size: 1.1em;
   font-style: italic;
   margin: 0 0 0.2em 0;
 }
 
-.show-details-btn {
+.show__btn--details {
   background-color: $color-blue;
   border-radius: 3px;
   color: $color-off-white;
@@ -140,7 +140,7 @@
 }
 
 @media screen and (min-width: 530px) {
-  .list-shows {
+  .list--shows {
     display: flex;
     flex-wrap: wrap;
     padding-top: 2em;
@@ -154,7 +154,7 @@
     }
   }
 
-  .show-btn {
+  .show__btn {
     border-top: 0;
     padding: 2.9em 0.5em;
 
@@ -165,7 +165,7 @@
 }
 
 @media screen and (min-width: 820px) {
-  .list-shows li {
+  .list--shows li {
     width: 33.33%;
   }
 }
