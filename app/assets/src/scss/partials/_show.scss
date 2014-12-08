@@ -132,6 +132,7 @@ $color-s-green: desaturate(#1db200, 15);
   display: inline-block;
   font-size: 1.4em;
   font-weight: 900;
+  position: relative;
   text-transform: none;
 
   &:after {
@@ -149,6 +150,23 @@ $color-s-green: desaturate(#1db200, 15);
     background-color: $color-s-yellow;
     color: $color-grey;
   }
+}
+
+.show__sold-out-banner {
+  @extend %roboto-cond;
+  background-color: $color-s-yellow;
+  box-sizing: border-box;
+  color: #000;
+  display: inline-block;
+  font-size: 60%;
+  font-weight: 700;
+  left: -2.5%;
+  padding: 0 0.2em;
+  position: absolute;
+  top: 1em;
+  transform: rotate(-5deg);
+  width: 105%;
+  z-index: 100;
 }
 
 @media screen and (min-width: 481px) {
