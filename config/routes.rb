@@ -2,9 +2,10 @@ Rails.application.routes.draw do
   root 'home#index'
 
   get "/news", to: "news#index"
+
   get "/articles", to: "static_pages#articles"
   get "/merch", to: "static_pages#merch"
-
+  get "/contact", to: "static_pages#contact"
   get "/fans", to: "static_pages#fans"
   get "/about", to: "static_pages#about"
   get "/purpose", to: "static_pages#purpose"

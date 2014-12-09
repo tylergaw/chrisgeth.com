@@ -1,0 +1,23 @@
+<% provide :body_class, "page--contact" %>
+<h1 class="page-title title-character <%= title_char_class %>">Say Hello!</h1>
+
+<div class="page--content">
+  <ul class="list list--contacts">
+    <li>
+      <h4>If you’d like to book Chris Gethard, please contact Marcus Levy</h4>
+        <%= link_to "mlevy@apanewyork.com", "mailto:mlevy@apanewyork.com", class: "button btn--med" %>
+    </li>
+    <li>
+      <h4>For “hellos”, “how-do-you-dos”, etc.</h4>
+      <%= link_to "zerolaughs@gmail.com", "mailto:zerolaughs@gmail.com", class: "button btn--med" %>
+    </li>
+    <li>
+      <h4>On Twitter</h4>
+      <%= link_to "@ChrisGethard", "https://twitter.com/ChrisGethard", class: "button btn--med" %>
+    </li>
+    <li>
+      <h4>On Facebook</h4>
+      <%= link_to "/chrisgethard", "https://www.facebook.com/chrisgethard", class: "button btn--med" %>
+    </li>
+  </ul>
+</div>

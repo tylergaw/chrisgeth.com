@@ -1,0 +1,21 @@
+.list--contacts {
+  font-size: 1.1em;
+  max-width: get-target-width(4);
+  padding-bottom: 2.2em;
+  text-align: center;
+
+  li {
+    padding: 0.4em 0 1.4em 0;
+  }
+
+  h4 {
+    margin: 0.2em 0;
+  }
+}
+
+@media screen and (min-width: 420px) {
+  .list--contacts {
+    font-size: 1.4em;
+    padding-bottom: 1em;
+  }
+}

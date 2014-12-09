@@ -106,8 +106,18 @@ a {
   }
 }
 
+.btn--med {
+  font-size: 110%;
+}
+
 .btn--text {
   display: inline-block;
   font-weight: 700;
   padding: 0.3em 0.6em;
+}
+
+.list {
+  list-style: none outside;
+  margin: 0 auto;
+  padding: 0;
 }
