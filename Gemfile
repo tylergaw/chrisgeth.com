@@ -13,6 +13,7 @@ gem 'youtube_it', '2.4.2'
 gem 'paperclip', '4.2'
 gem 'aws-sdk', '1.59.0'
 gem 'tumblr_client', '0.8.5'
+gem 'asset_sync', '1.1.0'
 
 group :development, :test do
   gem 'byebug', '3.4.0'
