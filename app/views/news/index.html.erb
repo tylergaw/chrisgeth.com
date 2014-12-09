@@ -8,12 +8,12 @@
 
   <% if @prev_page or @next_page %>
   <div class="pagination">
-    <% if @prev_page %>
-    <%= link_to "Prev", news_path(page: @prev_page), :class => "button" %>
-    <% end %>
-
     <% if @next_page %>
-    <%= link_to "Next", news_path(page: @next_page), :class => "button" %>
+    <%= link_to "Older", news_path(page: @next_page), :class => "button" %>
+    <% end %>
+    
+    <% if @prev_page %>
+    <%= link_to "Newer", news_path(page: @prev_page), :class => "button" %>
     <% end %>
   </div>
   <% end %>
