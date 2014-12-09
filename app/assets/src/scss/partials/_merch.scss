@@ -3,7 +3,7 @@
   margin: 0 auto;
   max-width: get-target-width(9.2);
   overflow: hidden;
-  padding: 0 calc-percent(get-target-width(0.5), $container-max-width);
+  padding: 0 1.5em 2em 1.5em;
 }
 
 .merch-item {
@@ -46,9 +46,10 @@
 .merch-item__quote {
   border-left: 6px solid $color-red;
   color: $color-red;
-  margin: 0;
+  margin: 2em 0;
   padding-left: 0.8em;
-  
+  text-align: left;
+
   p {
     font-weight: 700;
   }
@@ -76,6 +77,7 @@
   }
 
   .merch-link-main {
+    margin-top: 0.8em;
     float: left;
     width: 30%;
   }
