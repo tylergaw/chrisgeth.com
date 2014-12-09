@@ -16,4 +16,8 @@ class StaticPagesController < ApplicationController
 
   def contact
   end
+
+  def temp_home
+    render :layout => false
+  end
 end
