@@ -1,7 +1,6 @@
 module TumblrHelper
-  def tb_url
-    'thechrisgethardshow.tumblr.com'
-  end
+  BlogURL = 'thechrisgethardshow.tumblr.com'
+  WhitelistTag = 'chrisgeth'
 
   def tb_client
     tb_client = Tumblr::Client.new :consumer_key => ENV['TUMBLR_KEY']

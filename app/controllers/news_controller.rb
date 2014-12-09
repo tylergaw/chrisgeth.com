@@ -8,14 +8,15 @@ class NewsController < ApplicationController
     post_type = (params[:type]) or nil
     options = {
       'offset' => offset,
-      'limit' => per_page
+      'limit' => per_page,
+      'tag' => WhitelistTag
     }
 
     if post_type
       options['type'] = post_type
     end
 
-    res = tb_client.posts(tb_url, options)
+    res = tb_client.posts(BlogURL, options)
 
     total = res['total_posts']
     total_pages = (total.to_f / per_page).floor
