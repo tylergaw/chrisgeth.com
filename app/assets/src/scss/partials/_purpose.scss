@@ -1,0 +1,29 @@
+.purpose-page-title {
+  font-size: 24vw;
+  padding: 0.2em 0.2em 0.3em 0.2em;
+  text-indent: 0;
+
+  @media screen and (min-width: 530px) {
+    font-size: 8em;
+    padding-top: 0.1em;
+  }
+}
+
+.purpose-content {
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: get-target-width(7);
+  padding-bottom: 4em;
+
+  p:first-child {
+    &:first-letter {
+      @extend %drop-cap;
+    }
+  }
+
+  @media screen and (min-width: 560px) {
+    font-size: 1.3em;
+  }
+}

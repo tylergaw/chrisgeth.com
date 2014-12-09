@@ -1,0 +1,81 @@
+.page--home {
+  .container--content {
+    background: $color-off-white url("../images/home-posse.jpg") no-repeat center -1em;
+    background-size: 240%;
+  }
+
+  [role="banner"] {
+    padding-top: 38%;
+
+    &:before {
+      z-index: 1;
+    }
+
+    &:after {
+      background: transparent url("../images/home-chris.png") no-repeat center top;
+      background-size: 100%;
+      content: "";
+      display: block;
+      height: 728px;
+      left: 22%;
+      max-width: 360px;
+      position: absolute;
+      top: 0.3em;
+      width: calc-percent(360px, 610px);
+      z-index: 2;
+    }
+  }
+
+  @media screen and (min-width: 430px) {
+    .container--content {
+      background-size: 103%;
+    }
+
+    [role="banner"] {
+      padding-top: 23%;
+
+      &:after {
+        left: 37%;
+        width: calc-percent(360px, $container-max-width);
+      }
+    }
+  }
+
+  @media screen and (min-width: 1450px) {
+    [role="banner"] {
+      padding-top: 334px;
+    }
+  }
+
+  @media screen and (min-width: 1800px) {
+    .container--content {
+      background-size: 1840px;
+    }
+  }
+}
+
+.page--content--home {
+  clear: both;
+  overflow: hidden;
+}
+
+.home__section {
+  margin-bottom: 3em;
+  padding-top: 0.5em;
+}
+
+.home__section__footer {
+  text-align: right;
+}
+
+@media screen and (min-width: 640px) {
+  .home__section--news {
+    float: left;
+    width: calc-percent(get-target-width(7), get-target-width(12));
+  }
+
+  .home__section-shows {
+    float: right;
+    width: calc-percent(get-target-width(4), get-target-width(12));
+  }
+}

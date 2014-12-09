@@ -1,0 +1,83 @@
+<% provide :body_class, "page-merch" %>
+<h1 class="page-title title-character <%= title_char_class %>">Help Me Buy Food</h1>
+
+<ul class="merch-items">
+  <li class="merch-item merch-item-album">
+    <%= link_to image_tag("my-comedy-album-by-gethard.jpg",
+      alt: "The cover of My Comedy Album"),
+      "http://dongiovannirecords.com/product/115-my-comedy-album",
+      class: "merch-link-main" %>
+
+    <div class="merch-item-details">
+      <h3 class="merch-item-title">My Album</h3>
+      <p class="merch-item-desc">
+        This is my first ever album. I’m really proud of it. I think it represents
+        a lot of the work I’ve been doing on stage and where I’m at as a solo artist circa the end of 2013.
+        Many TCGS fans have consistently said that they wish they knew more about
+        my solo work. Well this is your chance!
+      </p>
+      <blockquote class="merch-item__quote">
+        <p>
+          In a tight 40 minutes, he covers tragicomic stories from his own life,
+          including a sad blowjob outside Alan Rickman’s apartment and the time
+          he fell off the wagon—hard—at Bonnaroo and into a giant bag of molly.
+          It’s painfully funny, though not nearly as harrowing as it sounds, since
+          Gethard is telling his stories from the other side. He’s better now,
+          mostly, and seems to find it all very funny.
+        </p>
+        <footer>
+          - <a href="http://www.avclub.com/article/best-comedy-albums-and-specials-2014-212461">
+            Josh Modell <i>A.V. Club</i>, “The Best Comedy Albums and Specials of 2014”
+          </a>
+        </footer>
+      </blockquote>
+      <p class="merch-item-links">
+        You can find it on:<br>
+
+        <%= link_to "Don Giovanni", "http://dongiovannirecords.com/product/115-my-comedy-album",
+          class: "button" %>
+        &amp;
+        <%= link_to "iTunes", "https://itunes.apple.com/us/album/my-comedy-album/id804235512?ls=1",
+          class: "button" %>
+      </p>
+    </div>
+  </li>
+  <li class="merch-item merch-item-book">
+    <%= link_to image_tag("a-bad-idea-im-about-to-do-by-gethard.jpg",
+      alt: "The cover of A Bad Idea I'm About to Do"),
+      "http://www.amazon.com/Bad-Idea-About-Seriously-Stunningly/dp/0306820307",
+      class: "merch-link-main" %>
+
+    <div class="merch-item-details">
+      <h3 class="merch-item-title">My Book</h3>
+      <p class="merch-item-desc">
+        I wrote this book a few years back. It took me six years to write the rough
+        drafts, then convince someone to publish it, then to get it done and on shelves.
+        I am really proud of it. My mom cried when she read it. It's a bunch of stories
+        about me acting vaguely like an idiot asshole. Some of them cut deep and
+        start to show off my mental illness, some of them are lighter and are aimed
+        at just being funny, a few of them might miss the mark a bit but are still
+        sort of interesting if you're interested in me as a performer. Sorry if
+        this is too honest, but the book itself is actually way more honest. I
+        think this book is worth your time and money.
+      </p>
+      <blockquote class="merch-item__quote">
+        <p>
+          Chris Gethard proves that good storytelling trumps all other considerations
+          when determining if a book is worth reading. Mr. Gethard's storytelling
+          is very good, and this book is worth reading.
+        </p>
+        <footer>
+          - <a href="http://www.nyjournalofbooks.com/book-review/bad-idea-i%E2%80%99m-about-do">
+            Michael Adelberg, <i>NY Journal of Books</i>
+          </a>
+        </footer>
+      </blockquote>
+      <p class="merch-item-links">
+        You can find it on:<br>
+        <%= link_to "Amazon", "http://www.amazon.com/Bad-Idea-About-Seriously-Stunningly/dp/0306820307",
+          class: "button" %>
+      </p>
+    </div>
+  </li>
+</ul>

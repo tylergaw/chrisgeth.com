@@ -1,0 +1,122 @@
+%page-title-text {
+  @extend %roboto-cond;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+%page-title-inverse {
+  @extend %page-title-text;
+  background-color: $color-grey;
+  box-sizing: border-box;
+  color: $color-off-white;
+  font-size: 2.8em;
+  margin: 0 auto;
+  padding: 0.4em 0.2em 0.5em 0.2em;
+  position: relative;
+  text-align: center;
+  z-index: 100;
+}
+
+.page-title {
+  @extend %page-title-inverse;
+}
+
+@media screen and (min-width: 530px) {
+  .page-title {
+    background-color: transparent;
+    border-bottom: 2px solid lighten($color-grey, 70);
+    color: $color-grey;
+    font-size: 2.4em;
+    padding-bottom: 0.6em;
+    text-indent: 0.8em;
+    width: 99%;
+  }
+
+  .title-character {
+    &:before {
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-size: 99%;
+      content: " ";
+      display: block;
+      height: get-target-width(1.5);
+      left: 0;
+      max-width: get-target-width(1.1);
+      position: absolute;
+      top: -0.6em;
+      width: calc-percent(get-target-width(2), get-target-width(12));
+    }
+  }
+
+  .title-willem {
+    &:before {
+      background-image: url("../images/heading-willem.png");
+    }
+  }
+
+  .title-andy {
+    &:before {
+      background-image: url("../images/heading-andy.png");
+    }
+  }
+
+  .title-freddie {
+    &:before {
+      background-image: url("../images/heading-freddie.png");
+    }
+  }
+
+  .title-hills {
+    &:before {
+      background-image: url("../images/heading-hills.png");
+    }
+  }
+
+  .title-morrissey {
+    &:before {
+      background-image: url("../images/heading-morrissey.png");
+    }
+  }
+
+  .title-multiman {
+    &:before {
+      background-image: url("../images/heading-multiman.png");
+    }
+  }
+
+  .title-roddy {
+    &:before {
+      background-image: url("../images/heading-roddy.png");
+    }
+  }
+
+  .title-rickman {
+    &:before {
+      background-image: url("../images/heading-rickman.png");
+    }
+  }
+}
+
+@media screen and (min-width: 630px) {
+  .title-character {
+    &:before {
+      top: -1.1em;
+    }
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .page-title {
+    font-size: 3.8em;
+    text-indent: 0;
+  }
+
+  .title-character {
+    &:before {
+      height: get-target-width(2);
+      max-width: get-target-width(1.5);
+      top: -0.9em;
+      width: calc-percent(get-target-width(2), get-target-width(12));
+    }
+  }
+}

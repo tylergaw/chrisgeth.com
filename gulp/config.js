@@ -1,7 +1,10 @@
 var dest = "./public",
-  src = "./src";
+  src = "./app/assets/src";
 
 module.exports = {
+  src: src,
+  dest: dest,
+  
   scss: {
     src: src + "/scss/**/*.scss",
     dest: dest + "/css"
@@ -16,11 +19,18 @@ module.exports = {
     images: {
       src: src + "/images/**",
       dest: dest + "/images"
-    },
+    }
+  },
 
-    html: {
-      src: src + "/*.html",
-      dest: dest
+  deploy: {
+
+    // Configure deployment-related environment variables for static sites on S3.
+
+    s3: {
+      key: 'AWS_ACCESS_KEY_ID',
+      secret: 'AWS_SECRET_ACCESS_KEY',
+      bucket: 'S3_BUCKET',
+      region: 'S3_REGION'
     }
   }
-}
+};

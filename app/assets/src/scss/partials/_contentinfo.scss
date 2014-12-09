@@ -1,0 +1,166 @@
+[role="contentinfo"] {
+  $padding-lr: calc-percent(get-target-width(0.5), $container-max-width);
+  box-sizing: border-box;
+  color: $color-off-white;
+  font-weight: 400;
+  margin: 0 auto;
+  max-width: get-target-width(12);
+  padding: 2.5em $padding-lr 2em $padding-lr;
+  position: relative;
+  text-align: center;
+
+  a {
+    color: $color-red;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  &:before {
+    background: url("../images/heading-apache.png");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    content: "";
+    display: block;
+    height: get-target-width(2);
+    left: 34%;
+    max-width: get-target-width(1.6);
+    position: absolute;
+    top: -3.5em;
+    width: calc-percent(get-target-width(4), get-target-width(12));
+  }
+
+  @media screen and (min-width: 560px) {
+    overflow: hidden;
+
+    &:before {
+      top: 40%;
+      left: 70%;
+    }
+  }
+}
+
+.nav-footer {
+  position: relative;
+
+  ul {
+    list-style: none outside;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+  }
+}
+
+.nav-secondary {
+  color: darken($color-off-white, 40);
+  font-size: 1.1em;
+  font-weight: 900;
+  text-transform: uppercase;
+
+  li {
+    padding: 0 1%;
+  }
+
+  a {
+    border-bottom: 4px solid transparent;
+    display: inline-block;
+    text-shadow: 0 2px 0 darken($color-off-white, 80);
+
+    &:hover,
+    &:focus {
+      border-color: $color-red;
+      text-decoration: none;
+    }
+  }
+}
+
+.nav-external {
+  margin-top: 1.6em;
+
+  li {
+    padding: 0 0.5em;
+  }
+
+  .nav-tcgs {
+    display: block;
+    margin-bottom: 0.8em;
+  }
+}
+
+.tweet {
+  background-color: rgba($color-off-white, 0.08);
+  box-sizing: border-box;
+  margin-top: 1.4em;
+  overflow: hidden;
+  padding: 0.8em 1em;
+  text-align: left;
+}
+
+.tweet-title {
+  @extend %roboto-cond;
+  font-size: 1.1em;
+  font-weight: 700;
+  margin: 0 0 0.7em 0;
+}
+
+.tweet-avatar {
+  display: inline-block;
+  float: left;
+  max-width: get-target-width(0.55);
+  overflow: hidden;
+  width: 18%;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.tweet-content {
+  box-sizing: border-box;
+  float: left;
+  padding-left: 4%;
+  width: 80%;
+}
+
+.tweet-text {
+  line-height: 1.45;
+  margin: 0 0 0.5em 0;
+}
+
+.tweet-time {
+  font-size: 85%;
+  font-weight: 300;
+}
+
+@media screen and (min-width: 560px) {
+  [role="contentinfo"] {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
+
+  .tweet {
+    float: left;
+    margin-top: 0;
+    max-width: get-target-width(4);
+    width: 45%;
+  }
+
+  .this-column-does-something-different {
+    box-sizing: border-box;
+    float: right;
+    text-align: right;
+    width: 50%;
+  }
+
+  .nav-external {
+    margin-top: 1em;
+  }
+}

@@ -1,0 +1,197 @@
+.list--shows {
+  list-style: none outside;
+  margin: 0;
+  overflow: hidden;
+  padding: 0 0 4em 0;
+
+  li {
+    display: block;
+
+    &:hover {
+      background-color: lighten($color-blue, 42);
+    }
+  }
+}
+
+.shows-none {
+  background-color: transparent;
+  box-sizing: border-box;
+  color: $color-red;
+  font-size: 1.6em;
+  font-weight: 900;
+  padding: 1.5em;
+  pointer-events: none;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.show__btn {
+  display: block;
+  overflow: hidden;
+  padding: 2.6em 0.25em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:after {
+    background-color: $color-blue;
+    display: block;
+    content: "";
+    height: 8px;
+    margin: 0 auto;
+    position: relative;
+    top: 2.3em;
+    width: 3.5em;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: lighten($color-blue, 42);
+
+    .show__btn--details {
+      background-color: $color-red;
+      color: #fff;
+    }
+
+    .show__date {
+      &:before,
+      &:after {
+        color: $color-red;
+      }
+    }
+  }
+}
+
+.list--shows--home {
+  font-size: 90%;
+  padding-bottom: 0;
+
+  .show__btn {
+    padding: 2em 0.25em;
+
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.sold-out-banner {
+  @extend %roboto-cond;
+  background-color: $color-yellow;
+  box-sizing: border-box;
+  color: #000;
+  display: inline-block;
+  font-size: 80%;
+  font-weight: 700;
+  left: -10%;
+  padding: 0 0.2em;
+  position: absolute;
+  top: 0.5em;
+  transform: rotate(-5deg);
+  width: 120%;
+  z-index: 100;
+}
+
+.show__city {
+  color: $color-red;
+  font-size: 1.8em;
+  font-weight: 900;
+  line-height: 1;
+  margin: 0;
+}
+
+.show__date {
+  display: block;
+  font-size: 1.2em;
+  font-weight: 700;
+  line-height: 1.4;
+  padding: 0.6em 0;
+
+  &:before,
+  &:after {
+    content: "  \2605  \2605  \2605  ";
+    font-size: 80%;
+  }
+}
+
+.show__venue {
+  font-family: georgia, times, serif;
+  font-size: 1.6em;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  margin: 0;
+}
+
+.show__info-excerpt {
+  font-size: 1.1em;
+  font-style: italic;
+  margin: 0 0 0.2em 0;
+}
+
+.show__btn--details {
+  background-color: $color-blue;
+  border-radius: 3px;
+  color: $color-off-white;
+  display: inline-block;
+  font-size: 1.2em;
+  font-weight: 700;
+  margin: 0.4em 0 0 0;
+  padding: 0.3em 0.6em;
+  position: relative;
+  text-transform: none;
+
+  &:after {
+    content: "\25B6";
+    display: inline-block;
+    font-size: 60%;
+    line-height: 2.2;
+    padding-left: 0.2em;
+    padding-top: 0.1em;
+    vertical-align: top;
+  }
+}
+
+@media screen and (min-width: 530px) {
+  .list--shows {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 2em;
+
+    li {
+      width: 50%;
+    }
+
+    .shows-none {
+      width: 100%
+    }
+  }
+
+  .show__btn {
+    border-top: 0;
+    padding: 2.9em 0.5em;
+
+    &:after {
+      top: 2.5em;
+    }
+  }
+
+  .list--shows--home {
+    display: block;
+    padding-top: 0;
+
+    li {
+      width: auto;
+    }
+  }
+}
+
+@media screen and (min-width: 820px) {
+  .list--shows li {
+    width: 33.33%;
+  }
+
+  .list--shows--home li {
+    width: auto;
+  }
+}

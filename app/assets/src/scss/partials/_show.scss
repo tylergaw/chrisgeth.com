@@ -1,0 +1,303 @@
+$color-s-pink: desaturate(#df00b2, 15);
+$color-s-yellow: desaturate(#f7f400, 10);
+$color-s-green: desaturate(#1db200, 15);
+
+.page--show,
+.page--show body {
+  background: $color-s-green linear-gradient($color-s-pink 0%,
+    $color-s-yellow 30%, $color-s-yellow 81%, $color-s-green 100%) no-repeat;
+  background-size: 100% 550px;
+  transition: background-size 0.1s;
+}
+
+.show-poster {
+  color: $color-grey;
+  margin: 0 auto;
+  max-width: get-target-width(10);
+  padding-bottom: 2em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.show-poster__callout {
+  font-size: 140%;
+  padding: 0.5em 0;
+}
+
+.show-poster__headline {
+  font-size: 2em;
+  font-weight: 900;
+  line-height: 1;
+  margin: 0;
+}
+
+.show-poster__byline {
+  @extend %roboto-cond;
+  background-color: $color-grey;
+  color: mix($color-s-pink, $color-s-yellow, 50%);
+  display: inline-block;
+  font-weight: 700;
+  margin: 0;
+  padding: 0 0.2em;
+}
+
+.show-poster__name {
+  font-size: 2.3em;
+  font-weight: 900;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.show-poster__image {
+  background: $color-s-yellow url("../images/show-poster-000.jpg") no-repeat center top;
+  background-blend-mode: multiply;
+  background-size: 105%;
+  display: block;
+  filter: brightness(1.1);
+  margin: 0.2em auto 0 auto;
+  opacity: 0.7;
+  padding-top: 50%;
+  width: 80%;
+}
+
+.show-poster__image--001  {
+  background-image: url("../images/show-poster-001.jpg");
+}
+
+.show-poster__image--002  {
+  background-image: url("../images/show-poster-002.jpg");
+}
+
+.show-poster__image--003  {
+  background-image: url("../images/show-poster-003.jpg");
+}
+
+.show-poster__image--004  {
+  background-image: url("../images/show-poster-004.jpg");
+}
+
+.show-poster__image--005  {
+  background-image: url("../images/show-poster-005.jpg");
+}
+
+.show-poster {
+  .show__city {
+    font-size: 2.4em;
+    font-weight: 900;
+    line-height: 1;
+    margin: 0.3em 0 0 0;
+    padding: 0 0.4em;
+  }
+
+  .show__date {
+    display: block;
+    font-size: 1.2em;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-top: 0.1em;
+    padding: 0;
+
+    &:before,
+    &:after {
+      content: "  \2605  \2605  \2605  ";
+      font-size: 85%;
+    }
+  }
+
+  .show__venue {
+    font-family: georgia, times, serif;
+    font-size: 1.8em;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    line-height: 1;
+    margin: 0.8em 0 0.5em 0;
+    padding: 0 0.5em;
+  }
+
+  .show__info-excerpt {
+    border-color: $color-grey;
+    border-width: 10px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    font-size: 1.2em;
+    font-weight: 900;
+    line-height: 1.1;
+    margin: 1.2em auto 1.6em auto;
+    padding: 0.4em 0;
+    width: 80%;
+  }
+
+  .button--show-details {
+    background-color: $color-grey;
+    color: $color-s-green;
+    display: inline-block;
+    font-size: 1.4em;
+    font-weight: 900;
+    position: relative;
+    text-transform: none;
+
+    &:after {
+      content: "\25B6";
+      display: inline-block;
+      font-size: 60%;
+      line-height: 2.2;
+      padding-left: 0.2em;
+      padding-top: 0.1em;
+      vertical-align: top;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $color-s-yellow;
+      color: $color-grey;
+    }
+  }
+
+  .show__sold-out-banner {
+    @extend %roboto-cond;
+    background-color: $color-s-yellow;
+    box-sizing: border-box;
+    color: #000;
+    display: inline-block;
+    font-size: 60%;
+    font-weight: 700;
+    left: -2.5%;
+    padding: 0 0.2em;
+    position: absolute;
+    top: 1em;
+    transform: rotate(-5deg);
+    width: 105%;
+    z-index: 100;
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .show-poster {
+    font-size: 1.3em;
+  }
+
+  .show-poster__name {
+    font-size: 2.8em;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .page--show,
+  .page--show body {
+    background-size: 100% 700px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .show-poster__image {
+    padding-top: 40%;
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .page--show,
+  .page--show body {
+    background-size: 100% 900px;
+  }
+
+  .show-poster {
+    font-size: 1.8em;
+  }
+
+  .show-poster__callout {
+    font-size: 110%;
+  }
+
+  .show-poster__byline {
+    color: mix($color-s-pink, $color-s-yellow, 70%);
+  }
+
+  .show-poster {
+    .show__venue {
+      font-size: 2.3em;
+    }
+
+    .show__info-excerpt {
+      width: 60%;
+    }
+
+    .button--show-details {
+      font-size: 1.1em;
+    }
+  }
+}
+
+@media screen and (min-width: 930px) {
+  .page--show,
+  .page--show body {
+    background-size: 100% 1200px;
+  }
+
+  .show-poster {
+    font-size: 2.2em;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .page--show,
+  .page--show body {
+    background-size: 100% 1450px;
+  }
+
+  .show-poster {
+    font-size: 2.7em;
+  }
+
+  .show-poster__callout {
+    font-size: 100%;
+    padding: 0 0 0.2em 0;
+  }
+
+  .show-poster__image {
+    padding-top: 40%;
+    width: 65%;
+  }
+
+  .show-poster {
+    .show__city {
+      font-size: 2.1em;
+    }
+
+    .show__venue {
+      font-size: 1.8em;
+    }
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .page--show,
+  .page--show body {
+    background-size: 100% 1650px;
+  }
+
+  .show-poster {
+    font-size: 3.4em;
+    max-width: get-target-width(12);
+  }
+}
+
+.show-nav {
+  font-size: 1.2em;
+  padding: 0 0.5em 2em 0.5em;
+  text-align: center;
+
+  a {
+    color: $color-grey;
+    display: inline-block;
+    font-weight: 900;
+    padding: 0.2em;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus {
+      background-color: lighten($color-s-green, 10);
+    }
+  }
+}

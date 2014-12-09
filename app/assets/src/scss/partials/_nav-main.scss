@@ -1,0 +1,68 @@
+.nav-main {
+  box-sizing: border-box;
+  font-size: 1.4em;
+  margin: 0 auto 0.6em auto;
+  max-width: get-target-width(12);
+  padding: 0;
+  position: relative;
+  text-align: center;
+  width: 99%;
+  z-index: 3;
+
+  ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+
+  li {
+    display: inline-block;
+    list-style: none;
+  }
+
+  a {
+    color: $color-blue;
+    display: inline-block;
+    font-weight: 900;
+    padding: 0.2em 0.4em;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus {
+      background-color: lighten($color-blue, 35);
+    }
+  }
+}
+
+.page-news .nav-main a[href*="news"],
+.page-shows .nav-main a[href*="shows"],
+.page-articles .nav-main a[href*="articles"],
+.page-videos .nav-main a[href*="videos"],
+.page-merch .nav-main a[href*="merch"] {
+  background-color: $color-grey;
+  color: $color-off-white;
+  cursor: default;
+}
+
+@media screen and (min-width: 490px) {
+  .nav-main {
+    $offset: -1.2em;
+    border-top: 0.6em solid $color-grey;
+    font-size: 1.1em;
+    margin-bottom: $offset;
+    text-align: right;
+
+    ul {
+      background-color: $color-off-white;
+      top: $offset;
+    }
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .nav-main {
+    font-size: 1.3em;
+  }
+}

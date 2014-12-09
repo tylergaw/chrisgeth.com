@@ -1,0 +1,197 @@
+.page-about-content {
+  @extend %clearfix;
+  padding-bottom: 4.5em;
+  position: relative;
+  z-index: 10;
+
+  a {
+    font-weight: 700;
+  }
+}
+
+.about-page-title {
+  @extend %page-title-inverse;
+}
+
+.about-content-main {
+  box-sizing: border-box;
+  font-weight: 300;
+  line-height: 1.5;
+  position: relative;
+  z-index: 2;
+}
+
+.about-intro,
+.about-bio-container {
+  padding: 0 $gutter-padding;
+}
+
+.about-intro {
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+.about-bio-container {
+  font-size: 1.1em;
+}
+
+.about-content-secondary {
+  position: relative;
+  top: -3em;
+}
+
+.about-portrait {
+  overflow: hidden;
+  position: relative;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.about-portrait-duh {
+  display: none;
+}
+
+.about-pull-quote {
+  @extend %roboto-cond;
+  background-color: rgba($color-off-white, 0.7);
+  border-right: 10px solid $color-red;
+  bottom: 1.3em;
+  box-sizing: border-box;
+  color: $color-red;
+  font-size: 9vw;
+  font-weight: 700;
+  margin: 0;
+  padding: 0.5em $gutter-padding;
+  position: absolute;
+  text-align: right;
+
+  p {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 520px) {
+  .page-about-content {
+    padding-top: 2em;
+  }
+
+  .about-page-title {
+    background-color: transparent;
+    color: $color-grey;
+    font-size: 2.2em;
+    margin-bottom: 0.4em;
+    padding: 0;
+    position: relative;
+    text-align: left;
+
+    &:before {
+      background: transparent url("../images/about-arrows.png") no-repeat center center;
+      background-size: 100%;
+      content: "";
+      display: block;
+      height: 100px;
+      left: -#{get-target-width(1.1)};
+      max-width: get-target-width(1);
+      position: absolute;
+      top: 0;
+      width: calc-percent(get-target-width(2), get-target-width(6));
+      z-index: 1;
+    }
+  }
+
+  .about-content-main {
+    float: right;
+    padding-right: 1.5em;
+    width: calc-percent(get-target-width(6), get-target-width(12));
+  }
+
+  .about-intro,
+  .about-bio-container {
+    padding: 0;
+  }
+
+  .about-content-secondary {
+    float: left;
+    position: absolute;
+    top: 0;
+    width: calc-percent(get-target-width(5.8), get-target-width(12));
+  }
+
+  .about-portrait-duh {
+    bottom: 0.4em;
+    color: $color-off-white;
+    display: block;
+    font-size: 6.25vw;
+    font-weight: 700;
+    left: -0.1em;
+    letter-spacing: 0.75em;
+    line-height: 1.8;
+    margin: 0;
+    position: absolute;
+    text-transform: uppercase;
+    white-space: nowrap;
+    z-index: 2;
+
+    span {
+      letter-spacing: 1.25em;
+    }
+  }
+
+  .about-pull-quote {
+    background-color: transparent;
+    bottom: auto;
+    font-size: 5vw;
+    margin: 0 0.4em 0 0;
+    padding: 0 0.5em;
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 790px) {
+  .about-page-title {
+    font-size: 3.8em;
+  }
+
+  .about-content-secondary {
+    top: -4em;
+  }
+
+  .about-pull-quote {
+    font-size: 2.4em;
+    padding: 0 1em;
+  }
+}
+
+@media screen and (min-width: 930px) {
+  .about-content-main {
+    width: calc-percent(get-target-width(7), get-target-width(12));
+  }
+
+  .about-bio-container {
+    padding-left: calc-percent(get-target-width(1), get-target-width(7));
+  }
+
+  .about-content-secondary {
+    top: -8em;
+  }
+}
+
+@media screen and (min-width: 1090px) {
+  .about-content-main {
+    font-size: 1.1em;
+    padding-bottom: 3em;
+  }
+
+  .about-content-secondary {
+    top: -12em;
+  }
+}
+
+@media screen and (min-width: get-target-width(12)) {
+  .about-portrait-duh {
+    font-size: 4.9em;
+  }
+}

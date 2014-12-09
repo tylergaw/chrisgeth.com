@@ -1,0 +1,36 @@
+$color-off-white: #f9f8f8;
+$color-grey: #353535;
+$color-blue: #106dff;
+$color-green: #55fcc2;
+$color-red: #f50025;
+$color-yellow: #ffff00;
+
+// $width-content: 95%;
+// $width-content-max: 900px;
+
+// Grid setup
+$col-width: 96px;
+$gutter-width: 10px;
+$cols: 14; // This will give you 2 dead cols
+$container-max-width: 1474px;
+
+@function calc-percent($target, $context) {
+  @return ($target / $context) * 100%;
+}
+
+@function get-target-width($num-cols) {
+  // For every 2 cols, 1 gutter is needed.
+  $total-gutter-width: (ceil($num-cols) - 1) * $gutter-width;
+  $total-col-width: $num-cols * $col-width;
+  @return floor($total-col-width + $total-gutter-width);
+}
+
+$gutter-padding: calc-percent(get-target-width(0.5), $container-max-width);
+
+%clearfix {
+  &:after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}

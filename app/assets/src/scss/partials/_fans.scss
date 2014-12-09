@@ -1,0 +1,78 @@
+.fans__images {
+  display: block;
+  width: 100%;
+}
+
+.fans__quotes {
+  list-style: none outside;
+  margin: 0 auto;
+  padding: 3em 0 2em 0;
+
+  li {
+    box-sizing: border-box;
+    padding-bottom: 1.8em;
+  }
+
+  blockquote {
+    display: block;
+    font-size: 1.4em;
+    font-style: italic;
+    font-weight: 300;
+    margin: 0;
+
+    p {
+      $indent: 1.1em;
+      display: inline-block;
+      margin: 0;
+      position: relative;
+      text-indent: $indent * 1.1;
+
+      &:before {
+        color: $color-red;
+        content: "“";
+        display: inline-block;
+        font-family: georgia;
+        font-size: 2.7em;
+        left: -$indent * 0.5;
+        line-height: 1;
+        position: absolute;
+      }
+    }
+  }
+
+  @media screen and (min-width: 700px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-left: 1.6em;
+    padding-right: 1.6em;
+
+    li {
+      padding-right: 1em;
+      width: 50%;
+    }
+
+    .fan__quote--full {
+      font-size: 1.2em;
+      padding-right: 0;
+      padding-bottom: 1.5em;
+      width: 100%;
+
+      blockquote {
+        border-left: 10px solid $color-red;
+        color: $color-red;
+        font-weight: 700;
+        font-style: normal;
+        padding-left: 1.1em;
+
+        p {
+          text-indent: 0;
+
+          &:before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

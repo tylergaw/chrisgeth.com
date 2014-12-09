@@ -1,0 +1,123 @@
+html,
+body {
+  @extend %roboto;
+  background-color: darken($color-off-white, 80);
+  height: 100%;
+}
+
+.container--content {
+  $border-size: 6px;
+  background-color: $color-off-white;
+  border-bottom: $border-size solid $color-red;
+  position: relative;
+
+  &:after {
+    background-color: darken($color-off-white, 80);
+    border-top: $border-size solid $color-red;
+    top: 99.8%;
+    content: "";
+    display: block;
+    height: 60px;
+    position: absolute;
+    transform: skewY(-1deg);
+    width: 100%;
+
+    @media screen and (min-width: 800px) {
+      transform: skewY(-0.5deg);
+    }
+  }
+}
+
+a {
+  color: $color-blue;
+}
+
+[role="main"] {
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: get-target-width(12);
+}
+
+.page--content {
+  padding: $gutter-padding;
+}
+
+%drop-cap {
+  color: $color-red;
+  display: block;
+  float: left;
+  font-family: georgia;
+  font-size: 290%;
+  font-weight: 900;
+  line-height: 1;
+  padding: 0 0.15em 0 0;
+  position: relative
+}
+
+.page__intro {
+  font-size: 1.2em;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0 auto;
+  padding-top: 1.4em;
+
+  &:first-letter {
+    @extend %drop-cap;
+  }
+
+  @media screen and (min-width: 620px) {
+    columns: 2;
+    font-size: 1.3em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    text-align: left;
+  }
+}
+
+.heading--section {
+  @extend %page-title-text;
+  font-size: 1.6em;
+  margin: 0;
+  padding-bottom: 0.5em;
+  position: relative;
+
+  &:before {
+    background-color: $color-grey;
+    content: "";
+    display: block;
+    height: 0.25em;
+    width: 1.5em;
+  }
+}
+
+.button {
+  background-color: $color-blue;
+  border-radius: 3px;
+  color: $color-off-white;
+  display: inline-block;
+  font-weight: 700;
+  padding: 0.3em 0.6em;
+  position: relative;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    background-color: $color-red;
+  }
+}
+
+.btn--med {
+  font-size: 110%;
+}
+
+.btn--text {
+  display: inline-block;
+  font-weight: 700;
+  padding: 0.3em 0.6em;
+}
+
+.list {
+  list-style: none outside;
+  margin: 0 auto;
+  padding: 0;
+}

@@ -1,0 +1,169 @@
+<% provide :body_class, "page-articles" %>
+<h1 class="page-title title-character <%= title_char_class %>">These Are Important To Me</h1>
+<div class="page--content">
+  <p class="page__intro">
+    I 100% consider myself a comedian before anything else and that’s my job and
+    my passion through and through. But on the side I sometimes get a chance to
+    write articles and they're not always necessarily funny but I'm really proud
+    of them. Maybe you’d like to poke around and see what they're all about.
+    <b>Warning</b> - some of them are about mental health stuff so there may be some
+    triggers regarding depression and suicide and stuff like that, but I'm pretty
+    proud that I slid backwards into being someone who is willing to talk openly
+    about that stuff so I don't want to apologize for that. I'm happy to put all
+    these articles in one place and sincerely hope you read them all at work on
+    your boss's dime.
+  </p>
+
+  <ul class="articles-list">
+    <li class="article">
+      <time class="article-date" datetime="2014-08-12">
+        <%= "2014-08-12".to_time.strftime("%b %d %Y") %>
+      </time>
+
+      <%= link_to image_tag("http://gethard.s3-website-us-east-1.amazonaws.com/articles/images/williams.jpg"),
+        "http://www.vulture.com/2014/08/what-it-was-like-to-do-improv-with-robin-williams.html",
+        class: "article-image" %>
+
+      <h3 class="article-title">
+        <a href="http://www.vulture.com/2014/08/what-it-was-like-to-do-improv-with-robin-williams.html">
+          What It Was Like to Do Surprise Improv With Robin Williams
+        </a>
+      </h3>
+
+      <p class="article-excerpt">
+        I had the chance to do improv a few times with Robin Williams. When he
+        passed away, Vulture asked me to write about what that experience was
+        like. The article is here and it's heartfelt and emo, but I've never
+        claimed to not be those things.
+      </p>
+    </li>
+
+    <li class="article">
+      <time class="article-date" datetime="2014-06-23">
+        <%= "2014-06-23".to_time.strftime("%b %d %Y") %>
+      </time>
+
+      <%= link_to image_tag("http://gethard.s3-website-us-east-1.amazonaws.com/articles/images/humans.jpg"),
+        "http://www.vice.com/read/learning-about-humanity-on-public-transportation",
+        class: "article-image" %>
+
+      <h3 class="article-title">
+        <a href="http://www.vice.com/read/learning-about-humanity-on-public-transportation">
+          Learning About Humanity on Public Transportation
+        </a>
+      </h3>
+
+      <p class="article-excerpt">
+        This one was actually named one of the 100 best pieces of journalism in
+        2013 by The Atlantic, which is a huge honor. And which also must really
+        piss off actual journalists who learned their craft and work hard at it.
+        My bad, journalists.
+      </p>
+    </li>
+
+    <li class="article">
+      <time class="article-date" datetime="2013-05-04">
+        <%= "2013-05-04".to_time.strftime("%b %d %Y") %>
+      </time>
+
+      <%= link_to image_tag("http://gethard.s3-website-us-east-1.amazonaws.com/articles/images/drinking.jpg"),
+        "http://www.vice.com/read/why-i-quit-drinking",
+        class: "article-image" %>
+
+      <h3 class="article-title">
+        <a href="http://www.vice.com/read/why-i-quit-drinking">
+          Why I Quit Drinking
+        </a>
+      </h3>
+
+      <p class="article-excerpt">
+        This one is one of the funnier ones you'll find on this page, but it's
+        pretty hard for me to read.
+      </p>
+    </li>
+
+    <li class="article">
+      <time class="article-date" datetime="2012-09-11">
+        <%= "2012-09-11".to_time.strftime("%b %d %Y") %>
+      </time>
+
+      <h3 class="article-title">
+        <a href="http://thechrisgethardshow.tumblr.com/post/31345619495/for-gethard-anonymous-asks-gethard-i-know-youve">
+          The Anonymous Fan Suicide Letter
+        </a>
+      </h3>
+
+      <p class="article-excerpt">
+        This anonymous letter came to me from a suicidal fan and I freaked out
+        and just brain dumped all my thoughts and opinions regarding it into
+        this post. This interaction made me someone known for speaking out about
+        mental health awareness and suicide prevention, which I didn't quite sign
+        up for outright but which I am very proud to now say. A lot of people have
+        asked me about this piece and for advice after reading it, and I really
+        hope anyone who is struggling or sad who found this piece or this website
+        while searching for info on this stuff feels better and stays strong.
+      </p>
+    </li>
+
+    <li class="article">
+      <time class="article-date" datetime="2014-05-27">
+        <%= "2014-05-27".to_time.strftime("%b %d %Y") %>
+      </time>
+
+      <h3 class="article-title">
+        <a href="http://thechrisgethardshow.tumblr.com/post/87041806996/overcome-your-programming-and-be-a-better-man">
+          Overcome Your Programming and Be a Better Man
+        </a>
+      </h3>
+
+      <p class="article-excerpt">
+        After that kid Elliott Rodgers shot a bunch of people, I was reading about
+        how he was a poster on a lot of the mens' rights message boards and chat
+        rooms. That world is so dangerous to me and I wrote my feelings about it
+        here. This lead to a brief online war with the Red Pill community that
+        was half hilarious and half terrifying. I hope young men who can't get
+        girls see me as someone who grew up with very much the same feelings and
+        turned out relatively ok. Don't get sucked into the online anti-feminist
+        circle jerk!
+      </p>
+    </li>
+
+    <li class="article">
+      <time class="article-date" datetime="2012-08-08">
+        <%= "2012-08-08".to_time.strftime("%b %d %Y") %>
+      </time>
+
+      <h3 class="article-title">
+        <a href="http://thechrisgethardshow.tumblr.com/post/28992028994/the-chase-is-the-thing-and-the-thing-is-the-chase">
+          The Chase Is The Thing and The Thing Is The Chase
+        </a>
+      </h3>
+
+      <p class="article-excerpt">
+        I have very strong feelings about peoples' right and responsibility to
+        follow their own creative impulses. I know being "pro-creativity" is not
+        a controversial stance, but it gets me really riled up. I got this
+        anonymous question from a fan once and for some reason it hit me in the
+        gut that day. I put this piece out into the world to kind of say it all
+        to myself while also saying it to whomever asked that question and a lot
+        of people have told me it lit a fire under them. That makes me happy.
+      </p>
+    </li>
+
+    <li class="article">
+      <time class="article-date" datetime="2014-08-12">
+        <%= "2014-08-12".to_time.strftime("%b %d %Y") %>
+      </time>
+
+      <h3 class="article-title">
+        <a href="http://thechrisgethardshow.tumblr.com/post/94500709321/this-is-the-face-of-my-mental-illness">
+          This Is The Face of My Mental Illness
+        </a>
+      </h3>
+
+      <p class="article-excerpt">
+        If you want to see a really heartbreaking picture of me, this is your jam!
+      </p>
+    </li>
+  </ul>
+</div>

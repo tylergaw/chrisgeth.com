@@ -1,0 +1,145 @@
+.list-videos {
+  list-style: none outside;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 2em 0 1.4em 0;
+}
+
+.videos-none {
+  box-sizing: border-box;
+  color: $color-red;
+  font-size: 1.6em;
+  font-weight: 900;
+  padding: 1.5em;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.video {
+  box-sizing: border-box;
+  padding: 1.8em 0 2.8em 0;
+}
+
+.video-image {
+  background-color: #000;
+  display: block;
+  margin: 0.5em auto;
+  max-height: 25em;
+  max-width: get-target-width(7);
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  img {
+    display: block;
+    transition: transform 0.1s;
+    width: 100%;
+  }
+
+  &:before {
+    $size: 1.8em;
+    background-color: $color-red;
+    border-radius: 50%;
+    color: $color-off-white;
+    content: "▶︎";
+    display: block;
+    font-family: arial;
+    font-size: 2.6em;
+    height: $size;
+    left: 43%;
+    line-height: 1.9;
+    position: absolute;
+    text-align: center;
+    text-indent: 0.2em;
+    transform: scale(0);
+    top: 38%;
+    transition: transform 0.1s;
+    width: $size;
+    z-index: 2;
+  }
+
+  &:hover,
+  &:focus {
+    img {
+      transform: scale(1.03);
+    }
+
+    &:before {
+      transform: scale(1);
+    }
+  }
+}
+
+.video-title {
+  font-size: 1.65em;
+  font-weight: 900;
+  line-height: 1.35;
+  margin: 0.3em 0 0 0;
+  padding: 0;
+  text-transform: uppercase;
+
+  a {
+    border-bottom: 4px solid $color-off-white;
+    color: $color-red;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      border-color: $color-red;
+    }
+  }
+}
+
+.video-desc {
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 1.6;
+  margin: 0.4em 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 460px) {
+  .video-title {
+    font-size: 1.7em;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .video {
+    text-align: center;
+  }
+
+  .video-title {
+    font-size: 2.2em;
+    padding: 0 0.4em;
+  }
+
+  .video-desc {
+    padding: 0 2em;
+  }
+}
+
+@media screen and (min-width: 760px) {
+  .list-videos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .video {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    text-align: left;
+    width: calc-percent(get-target-width(6), get-target-width(12));
+  }
+
+  .video-title {
+    padding: 0;
+  }
+
+  .video-desc {
+    font-size: 1.2em;
+    padding: 0;
+  }
+}

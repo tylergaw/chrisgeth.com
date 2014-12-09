@@ -1,0 +1,80 @@
+<%= render 'layouts/common_head' %>
+<body class="<%= yield :body_class %>">
+  <div class="container--content">
+    <header role="banner">
+      <a href="./" class="geth-title"><h1>Chris Gethard</h1></a>
+      <%= render "layouts/nav" %>
+    </header>
+
+    <div role="main">
+      <%= yield %>
+    </div>
+  </div>
+
+  <div role="contentinfo">
+    <div class="this-column-does-something-different">
+      <nav role="navigation" class="nav-footer nav-secondary">
+        <ul>
+          <li>
+            <%= link_to "Fans", fans_path %>
+          </li>
+          <li>
+            <%= link_to "About", about_path %>
+          </li>
+          <li>
+            <%= link_to "Purpose", purpose_path %>
+          </li>
+          <li>
+            <%= link_to "Contact", contact_path %>
+          </li>
+        </ul>
+      </nav>
+
+      <nav role="navigation" class="nav-footer nav-external">
+        <ul>
+          <li class="nav-tcgs">
+            <%= link_to render("layouts/contentinfo/icon_tcgs"), "http://thechrisgethardshow.com" %>
+          </li>
+          <li>
+            <%= link_to render("layouts/contentinfo/icon_twitter"), "https://twitter.com/ChrisGethard" %>
+          </li>
+          <li>
+            <%= link_to render("layouts/contentinfo/icon_facebook"), "https://www.facebook.com/chrisgethard" %>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="tweet">
+      <h3 class="tweet-title"><a href="https://twitter.com/chrisgethard">@ChrisGethard on Twitter</a></h3>
+      <a class="tweet-avatar" href="<%= @tweet.user.url %>">
+        <img src="<%= @tweet.user.profile_image_url %>" alt="Geth Avatar">
+      </a>
+      <div class="tweet-content">
+        <p class="tweet-text">
+          <%= raw auto_link @tweet.text %>
+        </p>
+        <a href="<%= @tweet_url %>" class="tweet-time">
+          <time datetime="<%= @tweet.created_at %>">
+            <%= time_ago @tweet.created_at %>
+          </time>
+        </a>
+      </div>
+    </div>
+
+    <% if false %>
+    <div class="tinyletter">
+      <form action="https://tinyletter.com/tylergaw" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/tylergaw', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+        <div>
+          <label for="tlemail">Email</label>
+          <input type="email" name="email" id="tlemail">
+        </div>
+        <input type="hidden" value="1" name="embed">
+        <input type="submit" value="Subscribe">
+      </form>
+    </div>
+    <% end %>
+  </div>
+
+</body>
+</html>
