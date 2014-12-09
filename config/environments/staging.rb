@@ -31,6 +31,7 @@ Rails.application.configure do
 
   # Generate digests for assets URLs.
   config.assets.digest = true
+  config.action_controller.asset_host = "http://gethard-staging.s3-website-us-east-1.amazonaws.com/public"
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
