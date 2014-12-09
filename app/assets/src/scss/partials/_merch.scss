@@ -1,7 +1,7 @@
 .merch-items {
   list-style: none outside;
   margin: 0 auto;
-  max-width: get-target-width(9.2);
+  max-width: get-target-width(10);
   overflow: hidden;
   padding: 0 1.5em 2em 1.5em;
 }
@@ -37,6 +37,7 @@
 .merch-item-desc {
   margin: 0;
   font-size: 1.1em;
+  font-weight: 300;
 }
 
 .merch-item-links {
@@ -72,6 +73,10 @@
 }
 
 @media screen and (min-width: 550px) {
+  .merch-items {
+    padding-top: 1.6em;
+  }
+
   .merch-item {
     text-align: left;
   }
@@ -92,6 +97,10 @@
   }
 
   .merch-item-desc {
-    font-size: 1.2em;
+    font-size: 1.3em;
+  }
+
+  .merch-item__quote {
+    font-size: 1.1em;
   }
 }
