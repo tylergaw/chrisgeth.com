@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   root 'home#index'
-  # root 'static_pages#temp_home'
 
   get "/home", to: "home#index"
   get "/news", to: "news#index"
@@ -26,4 +25,13 @@ Rails.application.routes.draw do
     constraints: {:year => /\d{4}/, :month => /\d{2}/, :day => /\d{2}/}
 
   resources :videos, only: [:index]
+
+  namespace :admin do
+    get '', to: 'dashboard#index', as: '/'
+    resources :shows, :videos
+  end
+
+  devise_for :users, :controllers => {
+    :registrations => 'registrations'
+  }
 end
