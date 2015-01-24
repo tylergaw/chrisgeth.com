@@ -6,7 +6,11 @@ Celebrity comedian Chris Gethard says good things a lot.
 
 ## Setup
 
-Create a `.env` file in the root of the project:
+Copy `.env.example` to `.env` and update it's contents with the correct values. `.env` is ignored by Git.
+```shell
+cp .env.example .env
+```
+
 ```shell
 export TWITTER_KEY=key
 export TWITTER_SECRET=secret
