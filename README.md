@@ -57,7 +57,13 @@ production:
 ```
 
 **Install JS Packages** for the front-end build dependencies
-(There are some system-wide reqs needed here too, but will list those later)
+
+install global packages: (there may be more)
+```shell
+npm install -g gulp
+```
+
+install local packages:
 ```shell
 npm install
 ```
@@ -73,3 +79,14 @@ Run `gulp watch` while you’re working. It’ll rebuild each time you make a ch
 If you add new images or fonts, you'll need to stop the watcher, run `gulp copy-static`, and then start the watcher back up.
 
 Cross your fingers and `rails s` then check [http://localhost:3000](http://localhost:3000)
+
+## Build and Deploy
+
+We're using Travis-CI to build the project and deploy it to Heroku. The build process is Gulp. It's main job is to compile Scss to CSS. We're using `gulp-rev` to append a unique revision number to name of all static asset files. There is an application helper `rev_manifest` to grab the correct number and append it to the files when they are linked to in the templates. This is for cache-busting purposes.
+
+Static assets are hosted on AWS S3. There are currently dev, staging, and production buckets.
+
+The last step of the deploy is to sync those assets with `rake asset_sync`. That happens when Travis as successfully deployed the project to Heroku.
+
+## DNS
+We're using AWS Route 53 for DNS.
