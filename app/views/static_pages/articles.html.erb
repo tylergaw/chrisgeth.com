@@ -16,6 +16,27 @@
 
   <ul class="articles-list">
     <li class="article">
+      <time class="article-date" datetime="2014-02-13">
+        <%= "2014-02-13".to_time.strftime("%b %d %Y") %>
+      </time>
+
+      <%= link_to image_tag("http://gethard.s3-website-us-east-1.amazonaws.com/articles/images/simple-formula.jpg"),
+        "http://www.nytimes.com/roomfordebate/2015/02/12/how-to-handle-heartbreak-on-valentines-day/a-very-simple-formula",
+        class: "article-image" %>
+
+      <h3 class="article-title">
+        <a href="http://www.nytimes.com/roomfordebate/2015/02/12/how-to-handle-heartbreak-on-valentines-day/a-very-simple-formula">
+          A Very Simple Formula
+        </a>
+      </h3>
+
+      <p class="article-excerpt">
+        I somehow wrote something for the NY Times. Not bad for an Irish Catholic
+        dirtbag from New Jersey.
+      </p>
+    </li>
+
+    <li class="article">
       <time class="article-date" datetime="2014-08-12">
         <%= "2014-08-12".to_time.strftime("%b %d %Y") %>
       </time>
